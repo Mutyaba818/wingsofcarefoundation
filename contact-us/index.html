@@ -803,79 +803,253 @@
 								<p>All Fields Are Required</p>
 							</div>
 						</div>
-						<div class="elementor-element elementor-element-d4079a4 exad-sticky-section-no exad-glass-effect-no elementor-invisible elementor-widget elementor-widget-exad-contact-form-7"
+						<div class="elementor-element elementor-element-d4079a4 exad-sticky-section-no exad-glass-effect-no elementor-invisible elementor-widget elementor-widget-html"
 							data-id="d4079a4" data-element_type="widget" data-settings='{"_animation":"zoomIn"}'
-							data-widget_type="exad-contact-form-7.default">
+							data-widget_type="html.default">
 							<div class="elementor-widget-container">
-								<div class="exad-contact-form exad-contact-form-7 exad-contact-form-d4079a4">
 
+								<!-- CUSTOM CONTACT FORM STYLES -->
+								<style>
+									.custom-contact-form {
+										display: flex;
+										flex-direction: column;
+										gap: 20px;
+										width: 100%;
+									}
 
+									.custom-field-group {
+										display: flex;
+										flex-direction: column;
+										gap: 8px;
+									}
 
-									<div class="wpcf7 no-js" id="wpcf7-f171-p23-o1" lang="en-US" dir="ltr"
-										data-wpcf7-id="171">
-										<div class="screen-reader-response">
-											<p role="status" aria-live="polite" aria-atomic="true"></p>
-											<ul></ul>
-										</div>
-										<form action="https://formspree.io/f/mjyyybzw" method="POST"
-											class="wpcf7-form init" aria-label="Contact form" novalidate="novalidate"
-											data-status="init">
-											<div style="display: none;">
-												<input type="hidden" name="_wpcf7" value="171">
-												<input type="hidden" name="_wpcf7_version" value="6.0.3">
-												<input type="hidden" name="_wpcf7_locale" value="en_US">
-												<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f171-p23-o1">
-												<input type="hidden" name="_wpcf7_container_post" value="23">
-												<input type="hidden" name="_wpcf7_posted_data_hash" value="">
-											</div>
-											<p><span class="wpcf7-form-control-wrap" data-name="text-989"><input
-														size="40" maxlength="30" minlength="2"
-														class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-														autocomplete="name" aria-required="true" aria-invalid="false"
-														placeholder="Name*" value="" type="text" name="text-989"></span>
-											</p>
-											<p><span class="wpcf7-form-control-wrap" data-name="tel-144"><input
-														size="40" maxlength="400"
-														class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel"
-														autocomplete="tel" aria-required="true" aria-invalid="false"
-														placeholder="Phone Number*" value="" type="tel"
-														name="tel-144"></span>
-											</p>
-											<p><span class="wpcf7-form-control-wrap" data-name="email-915"><input
-														size="40" maxlength="400"
-														class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email"
-														autocomplete="email" aria-required="true" aria-invalid="false"
-														placeholder="Email*" value="" type="email"
-														name="email-915"></span>
-											</p>
-											<p><span class="wpcf7-form-control-wrap" data-name="text-509"><input
-														size="40" maxlength="70" minlength="2"
-														class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-														autocomplete="name" aria-required="true" aria-invalid="false"
-														placeholder="Subject*" value="" type="text"
-														name="text-509"></span>
-											</p>
-											<p><span class="wpcf7-form-control-wrap" data-name="textarea-739"><textarea
-														cols="40" rows="10" maxlength="2000"
-														class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required"
-														aria-required="true" aria-invalid="false"
-														placeholder="Enter message..."
-														name="textarea-739"></textarea></span><br>
-												- Please provide as much detail as possible to assist us in addressing
-												your question or concern as quickly as possible. Please do not enter
-												credit card information in these fields. If necessary, please call us on
-												+256763958683 or +256772229622
-											</p>
-											<p><input class="wpcf7-form-control wpcf7-submit has-spinner" type="submit"
-													value="Get in Touch Today!">
-											</p>
-											<div class="wpcf7-response-output" aria-hidden="true"></div>
-										</form>
+									.custom-label {
+										font-size: 14px;
+										font-weight: 600;
+										color: #444;
+										letter-spacing: 0.3px;
+									}
+
+									.custom-input,
+									.custom-textarea {
+										width: 100%;
+										padding: 14px 18px;
+										border: 1px solid rgba(0, 0, 0, 0.08);
+										border-radius: 8px;
+										background: rgba(255, 255, 255, 0.9);
+										font-size: 15px;
+										color: #222;
+										transition: all 0.3s ease;
+										outline: none;
+										box-sizing: border-box;
+										font-family: inherit;
+									}
+
+									.custom-input:focus,
+									.custom-textarea:focus {
+										border-color: #0073aa;
+										background: #fff;
+										box-shadow: 0 0 0 4px rgba(0, 115, 170, 0.1);
+									}
+
+									/* Browser-native invalid styling override */
+									.custom-input:invalid:not(:placeholder-shown),
+									.custom-textarea:invalid:not(:placeholder-shown) {
+										border-color: #dc3545;
+									}
+
+									.custom-textarea {
+										resize: vertical;
+										min-height: 120px;
+									}
+
+									.custom-submit-btn {
+										background: linear-gradient(135deg, #0073aa 0%, #005a87 100%);
+										color: white;
+										padding: 16px 32px;
+										border: none;
+										border-radius: 8px;
+										font-size: 16px;
+										font-weight: 700;
+										cursor: pointer;
+										transition: all 0.3s ease;
+										box-shadow: 0 4px 15px rgba(0, 115, 170, 0.3);
+										text-transform: uppercase;
+										letter-spacing: 0.5px;
+										align-self: flex-start;
+										margin-top: 10px;
+									}
+
+									.custom-submit-btn:hover {
+										transform: translateY(-2px);
+										box-shadow: 0 6px 20px rgba(0, 115, 170, 0.4);
+										filter: brightness(1.1);
+									}
+
+									.custom-submit-btn:disabled {
+										background: #ccc;
+										box-shadow: none;
+										cursor: not-allowed;
+										transform: none;
+										filter: none;
+									}
+
+									/* Success Message - No Shift */
+									#contact-success-msg {
+										visibility: hidden;
+										opacity: 0;
+										height: 0;
+										overflow: hidden;
+										background-color: #e8f5e9;
+										color: #2e7d32;
+										border: 1px solid #c8e6c9;
+										padding: 0 15px;
+										border-radius: 8px;
+										margin-top: 0;
+										text-align: center;
+										font-weight: 600;
+										font-size: 15px;
+										transition: all 0.3s ease;
+									}
+
+									#contact-success-msg.visible {
+										visibility: visible;
+										opacity: 1;
+										height: auto;
+										padding: 15px;
+										margin-top: 20px;
+									}
+
+									.form-note {
+										font-size: 13px;
+										color: #666;
+										line-height: 1.5;
+										margin-top: -10px;
+									}
+
+									@media (max-width: 768px) {
+										.custom-submit-btn {
+											width: 100%;
+											text-align: center;
+										}
+									}
+								</style>
+
+								<!-- CUSTOM CONTACT FORM HTML -->
+								<form class="custom-contact-form" id="customContactForm" novalidate>
+
+									<!-- Hidden Fields for FormSubmit -->
+									<input type="hidden" name="_subject"
+										value="Contact Message - Wings of Care Foundation">
+									<input type="text" name="_gotcha" style="display:none">
+
+									<!-- Name -->
+									<div class="custom-field-group">
+										<label class="custom-label" for="c_name">Name *</label>
+										<input type="text" id="c_name" name="name" class="custom-input" required
+											placeholder="Your full name">
 									</div>
-								</div>
 
+									<!-- Phone -->
+									<div class="custom-field-group">
+										<label class="custom-label" for="c_phone">Phone Number *</label>
+										<input type="tel" id="c_phone" name="phone" class="custom-input" required
+											placeholder="+256...">
+									</div>
+
+									<!-- Email -->
+									<div class="custom-field-group">
+										<label class="custom-label" for="c_email">Email *</label>
+										<input type="email" id="c_email" name="email" class="custom-input" required
+											placeholder="you@example.com">
+									</div>
+
+									<!-- Subject -->
+									<div class="custom-field-group">
+										<label class="custom-label" for="c_subject">Subject *</label>
+										<input type="text" id="c_subject" name="subject" class="custom-input" required
+											placeholder="How can we help?">
+									</div>
+
+									<!-- Message -->
+									<div class="custom-field-group">
+										<label class="custom-label" for="c_message">Message *</label>
+										<textarea id="c_message" name="message" class="custom-textarea" required
+											placeholder="Enter message..."></textarea>
+										<p class="form-note">
+											- Please provide as much detail as possible to assist us in addressing your
+											question or concern as quickly as possible.
+											Please do not enter credit card information in these fields. If necessary,
+											please call us on
+											+256763958683 or +256772229622
+										</p>
+									</div>
+
+									<!-- Submit Button (type="button" prevents 405, reportValidity() triggers native validation) -->
+									<button type="button" class="custom-submit-btn" id="customContactBtn">Get in Touch
+										Today!</button>
+
+									<!-- Success Message -->
+									<div id="contact-success-msg">
+										Thank you! Your message has been received. We will get back to you shortly.
+									</div>
+
+								</form>
 							</div>
 						</div>
+
+						<!-- AJAX SCRIPT USING NATIVE HTML5 VALIDATION -->
+						<script>
+							(function () {
+								const btn = document.getElementById("customContactBtn");
+								const form = document.getElementById("customContactForm");
+								const msg = document.getElementById("contact-success-msg");
+
+								if (btn && form) {
+									btn.addEventListener("click", async function (e) {
+										e.preventDefault();
+										e.stopPropagation();
+
+										// TRIGGER NATIVE BROWSER VALIDATION
+										// This shows the built-in tooltips/bubbles for invalid fields
+										// and returns false if any field is invalid
+										if (!form.reportValidity()) {
+											return; // Stop here - browser handles the error display
+										}
+
+										// If we reach here, all fields are valid!
+										const originalText = btn.innerText;
+										btn.innerText = "Sending...";
+										btn.disabled = true;
+
+										const formData = new FormData(form);
+										const data = {};
+										for (const [key, value] of formData.entries()) { data[key] = value; }
+
+										try {
+											const res = await fetch("https://formsubmit.co/ajax/martinmutyaba68@gmail.com", {
+												method: "POST",
+												headers: { "Content-Type": "application/json" },
+												body: JSON.stringify(data)
+											});
+
+											if (res.ok) {
+												msg.classList.add("visible");
+												form.reset();
+												setTimeout(() => msg.classList.remove("visible"), 10000);
+											} else {
+												alert("Something went wrong. Please try again.");
+											}
+										} catch (err) {
+											alert("Network error. Please check your connection.");
+										} finally {
+											btn.innerText = originalText;
+											btn.disabled = false;
+										}
+									});
+								}
+							})();
+						</script>
 					</div>
 					<div class="elementor-element elementor-element-0d8e6a2 e-grid e-con-full wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no e-con e-child"
 						data-id="0d8e6a2" data-element_type="container">

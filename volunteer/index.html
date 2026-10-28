@@ -1508,48 +1508,103 @@
 					<div class="elementor-element elementor-element-1afd460 exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-html"
 						data-id="1afd460" data-element_type="widget" data-widget_type="html.default">
 						<div class="elementor-widget-container">
-							<form action="https://formspree.io/f/xvkkkpyp" method="POST" class="volunteer-form"
+
+							<!-- Custom CSS -->
+							<style>
+								.volunteer-form input:invalid,
+								.volunteer-form select:invalid,
+								.volunteer-form textarea:invalid {
+									border: 1px solid #ccc !important;
+									box-shadow: none !important;
+								}
+
+								.volunteer-form input:focus,
+								.volunteer-form textarea:focus {
+									border-color: #0073aa !important;
+									box-shadow: 0 0 5px rgba(0, 115, 170, 0.3) !important;
+								}
+
+								#volunteer-success-msg {
+									visibility: hidden;
+									opacity: 0;
+									height: 0;
+									overflow: hidden;
+									background-color: #e8f5e9 !important;
+									color: #2e7d32 !important;
+									border: 1px solid #c8e6c9 !important;
+									padding: 0 15px !important;
+									border-radius: 4px !important;
+									margin-top: 0 !important;
+									text-align: center !important;
+									font-weight: normal !important;
+									font-size: 15px !important;
+									transition: all 0.3s ease !important;
+								}
+
+								#volunteer-success-msg.visible {
+									visibility: visible !important;
+									opacity: 1 !important;
+									height: auto !important;
+									padding: 15px !important;
+									margin-top: 15px !important;
+								}
+
+								.volunteer-submit-btn:hover {
+									background-color: #005a87 !important;
+								}
+
+								.volunteer-submit-btn:disabled {
+									background-color: #999 !important;
+									cursor: not-allowed !important;
+								}
+							</style>
+
+							<!-- Form: No action, novalidate, unique ID -->
+							<form method="POST" class="volunteer-form" id="volFormUnique" novalidate
 								style="display: flex; flex-direction: column; gap: 20px; text-align: left; width: 100%;">
+
+								<input type="hidden" name="_subject"
+									value="New Volunteer Application - Wings of Care Foundation">
 
 								<!-- Name Fields -->
 								<div style="display: flex; gap: 15px; flex-wrap: wrap;">
 									<div style="flex: 1; min-width: 200px;">
-										<label for="first_name"
+										<label for="v_first_name"
 											style="display: block; margin-bottom: 5px; font-weight: 600;">First Name
 											*</label>
-										<input type="text" id="first_name" name="first_name" required
+										<input type="text" id="v_first_name" name="first_name" aria-required="true"
 											style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
 									</div>
 									<div style="flex: 1; min-width: 200px;">
-										<label for="last_name"
+										<label for="v_last_name"
 											style="display: block; margin-bottom: 5px; font-weight: 600;">Last Name
 											*</label>
-										<input type="text" id="last_name" name="last_name" required
+										<input type="text" id="v_last_name" name="last_name" aria-required="true"
 											style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
 									</div>
 								</div>
 
 								<!-- Email Field -->
 								<div>
-									<label for="email"
+									<label for="v_email"
 										style="display: block; margin-bottom: 5px; font-weight: 600;">Email *</label>
-									<input type="email" id="email" name="email" required
+									<input type="email" id="v_email" name="email" aria-required="true"
 										style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
 								</div>
 
 								<!-- Phone Field -->
 								<div>
-									<label for="phone"
+									<label for="v_phone"
 										style="display: block; margin-bottom: 5px; font-weight: 600;">Phone *</label>
-									<input type="tel" id="phone" name="phone" required
+									<input type="tel" id="v_phone" name="phone" aria-required="true"
 										style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
 								</div>
 
 								<!-- Age Field -->
 								<div>
-									<label for="age" style="display: block; margin-bottom: 5px; font-weight: 600;">Age
+									<label for="v_age" style="display: block; margin-bottom: 5px; font-weight: 600;">Age
 										*</label>
-									<input type="number" id="age" name="age" min="0" required
+									<input type="number" id="v_age" name="age" min="0" aria-required="true"
 										style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
 								</div>
 
@@ -1599,41 +1654,106 @@
 
 								<!-- Previous Volunteer Experience -->
 								<div>
-									<label for="previous_experience"
+									<label for="v_prev_exp"
 										style="display: block; margin-bottom: 5px; font-weight: 600;">Previous Volunteer
 										Experience *</label>
-									<textarea id="previous_experience" name="previous_experience" rows="4" required
+									<textarea id="v_prev_exp" name="previous_experience" rows="4" aria-required="true"
 										style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
 								</div>
 
 								<!-- Volunteer Certifications -->
 								<div>
-									<label for="certifications"
+									<label for="v_certs"
 										style="display: block; margin-bottom: 5px; font-weight: 600;">Volunteer
 										Certifications *</label>
-									<textarea id="certifications" name="certifications" rows="4" required
+									<textarea id="v_certs" name="certifications" rows="4" aria-required="true"
 										style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
 								</div>
 
 								<!-- Motivation -->
 								<div>
-									<label for="motivation"
+									<label for="v_motivation"
 										style="display: block; margin-bottom: 5px; font-weight: 600;">Briefly help us
 										know why you'd like to volunteer. *</label>
-									<textarea id="motivation" name="motivation" rows="4" required
+									<textarea id="v_motivation" name="motivation" rows="4" aria-required="true"
 										style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
 								</div>
 
-								<!-- Submit Button -->
+								<!-- Submit Button (Unique ID) -->
 								<div>
-									<button type="submit"
+									<button type="button" class="volunteer-submit-btn" id="v_submit_btn_unique"
 										style="background-color: #0073aa; color: white; padding: 12px 24px; border: none; border-radius: 4px; font-size: 16px; cursor: pointer;">Submit</button>
+								</div>
+
+								<!-- Hidden Spam HoneyPot -->
+								<input type="text" name="_gotcha" style="display:none">
+
+								<!-- Custom Success Message -->
+								<div id="volunteer-success-msg">
+									Thank you! Your volunteer application has been received. We will contact you
+									shortly.
 								</div>
 
 							</form>
 						</div>
 					</div>
 				</div>
+
+				<!-- Bulletproof Script: Listens to BUTTON CLICK, not form submit -->
+				<script>
+					(function () {
+						// Use an IIFE to avoid global scope pollution but attach listener immediately
+						const btn = document.getElementById("v_submit_btn_unique");
+						const form = document.getElementById("volFormUnique");
+
+						if (btn && form) {
+							btn.addEventListener("click", async function (e) {
+								e.preventDefault();
+								e.stopPropagation(); // Stop ANY other listeners
+
+								const originalText = btn.innerText;
+								btn.innerText = "Sending...";
+								btn.disabled = true;
+
+								// Manual FormData collection for checkbox arrays
+								const formData = new FormData(form);
+								const data = {};
+
+								for (const [key, value] of formData.entries()) {
+									if (key.endsWith("[]")) {
+										if (!data[key]) data[key] = [];
+										data[key].push(value);
+									} else {
+										data[key] = value;
+									}
+								}
+
+								try {
+									const res = await fetch("https://formsubmit.co/ajax/martinmutyaba68@gmail.com", {
+										method: "POST",
+										headers: { "Content-Type": "application/json" },
+										body: JSON.stringify(data)
+									});
+
+									if (res.ok) {
+										document.getElementById("volunteer-success-msg").classList.add("visible");
+										form.reset();
+										setTimeout(() => {
+											document.getElementById("volunteer-success-msg").classList.remove("visible");
+										}, 10000);
+									} else {
+										alert("Something went wrong. Please try again.");
+									}
+								} catch (err) {
+									alert("Network error. Please check your connection.");
+								} finally {
+									btn.innerText = originalText;
+									btn.disabled = false;
+								}
+							});
+						}
+					})();
+				</script>
 			</div>
 		</div>
 		<div class="elementor-element elementor-element-73b6366 e-flex e-con-boxed wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no e-con e-parent"

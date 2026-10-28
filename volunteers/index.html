@@ -1243,7 +1243,8 @@
 							<div class="elementor-widget-container">
 								<div class="eael-dual-header">
 									<h2 class="title"><span class="lead solid-color">Opportunities For</span>
-										<span>Volunteering</span></h2> <span class="subtext"></span>
+										<span>Volunteering</span>
+									</h2> <span class="subtext"></span>
 								</div>
 
 							</div>
@@ -1313,7 +1314,8 @@
 							<div class="elementor-widget-container">
 								<div class="eael-dual-header">
 									<h2 class="title"><span class="lead solid-color">Volunteer</span>
-										<span>Benefits</span></h2> <span class="subtext"></span>
+										<span>Benefits</span>
+									</h2> <span class="subtext"></span>
 								</div>
 
 							</div>
@@ -1502,300 +1504,385 @@
 				<div class="elementor-element elementor-element-3276e2c e-con-full e-flex wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no elementor-invisible e-con e-child"
 					data-id="3276e2c" data-element_type="container"
 					data-settings='{"animation":"zoomIn","animation_delay":1000}'>
-					<div class="elementor-element elementor-element-1afd460 exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-formidable"
-						data-id="1afd460" data-element_type="widget" data-widget_type="formidable.default">
+					<div class="elementor-element elementor-element-1afd460 exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-html"
+						data-id="1afd460" data-element_type="widget" data-widget_type="html.default">
 						<div class="elementor-widget-container">
-							<div class="frm_forms  with_frm_style frm_style_formidable-style" id="frm_form_3_container"
-								data-token="386a7755fc2d23c67f1275b9ccdf3177">
-								<form enctype="multipart/form-data" method="post" class="frm-show-form "
-									id="form_volunteer-regfrom" data-token="386a7755fc2d23c67f1275b9ccdf3177">
-									<div class="frm_form_fields ">
-										<fieldset>
-											<legend class="frm_screen_reader">volunteer regFrom</legend>
 
-											<div class="frm_fields_container">
-												<input type="hidden" name="frm_action" value="create">
-												<input type="hidden" name="form_id" value="3">
-												<input type="hidden" name="frm_hide_fields_3" id="frm_hide_fields_3"
-													value="">
-												<input type="hidden" name="form_key" value="volunteer-regfrom">
-												<input type="hidden" name="item_meta[0]" value="">
-												<input type="hidden" id="frm_submit_entry_3" name="frm_submit_entry_3"
-													value="b89dbb33d8"><input type="hidden" name="_wp_http_referer"
-													value="/volunteers/">
-												<div id="frm_field_14_container"
-													class="frm_form_field form-field  frm_required_field frm_top_container">
-													<div id="field_imq33_label" class="frm_primary_label">Name
-														<span class="frm_required" aria-hidden="true">*</span>
-													</div>
-													<fieldset aria-labelledby="field_imq33_label">
-														<legend class="frm_screen_reader frm_hidden">
-															Name </legend>
+							<style>
+								.vol-form {
+									display: flex;
+									flex-direction: column;
+									gap: 20px;
+									width: 100%;
+								}
 
-														<div class="frm_combo_inputs_container"
-															id="frm_combo_inputs_container_14"
-															data-name-layout="first_last">
-															<div id="frm_field_14-first_container"
-																class="frm_form_field form-field frm_form_subfield-first  frm6"
-																data-sub-field-name="first">
-																<label for="field_imq33_first"
-																	class="frm_screen_reader frm_hidden">
-																	Name </label>
+								.vol-row {
+									display: flex;
+									gap: 15px;
+									flex-wrap: wrap;
+								}
 
-																<input type="text" id="field_imq33_first" value=""
-																	name="item_meta[14][first]"
-																	data-reqmsg="Name cannot be blank."
-																	aria-required="true" data-invmsg="Name is invalid"
-																	aria-invalid="false">
-															</div>
-															<div id="frm_field_14-last_container"
-																class="frm_form_field form-field frm_form_subfield-last  frm6"
-																data-sub-field-name="last">
-																<label for="field_imq33_last"
-																	class="frm_screen_reader frm_hidden">
-																	Name </label>
+								.vol-col {
+									flex: 1;
+									min-width: 200px;
+									display: flex;
+									flex-direction: column;
+									gap: 8px;
+								}
 
-																<input type="text" id="field_imq33_last" value=""
-																	name="item_meta[14][last]"
-																	data-reqmsg="Name cannot be blank."
-																	aria-required="true" data-invmsg="Name is invalid"
-																	aria-invalid="false">
-															</div>
-														</div>
-													</fieldset>
+								.vol-field {
+									display: flex;
+									flex-direction: column;
+									gap: 8px;
+								}
 
+								.vol-label {
+									font-size: 14px;
+									font-weight: 600;
+									color: #444;
+									letter-spacing: 0.3px;
+								}
 
+								.vol-input,
+								.vol-textarea {
+									width: 100%;
+									padding: 14px 18px;
+									border: 1px solid rgba(0, 0, 0, 0.08);
+									border-radius: 8px;
+									background: rgba(255, 255, 255, 0.9);
+									font-size: 15px;
+									color: #222;
+									transition: all 0.3s ease;
+									outline: none;
+									box-sizing: border-box;
+									font-family: inherit;
+								}
 
-												</div>
-												<div id="frm_field_15_container"
-													class="frm_form_field form-field  frm_required_field frm_top_container">
-													<label for="field_8kbdl" id="field_8kbdl_label"
-														class="frm_primary_label">Email
-														<span class="frm_required" aria-hidden="true">*</span>
-													</label>
-													<input type="email" id="field_8kbdl" name="item_meta[15]" value=""
-														data-reqmsg="Email cannot be blank." aria-required="true"
-														data-invmsg="Email is invalid" aria-invalid="false">
+								.vol-input:focus,
+								.vol-textarea:focus {
+									border-color: #0073aa;
+									background: #fff;
+									box-shadow: 0 0 0 4px rgba(0, 115, 170, 0.1);
+								}
 
+								/* Manual error state matching native look */
+								.vol-input.error,
+								.vol-textarea.error {
+									border-color: #dc3545 !important;
+									background-color: #fff8f8 !important;
+									box-shadow: 0 0 0 4px rgba(220, 53, 69, 0.1) !important;
+								}
 
-												</div>
-												<div id="frm_field_17_container"
-													class="frm_form_field form-field  frm_required_field frm_top_container">
-													<label for="field_3s3p1" id="field_3s3p1_label"
-														class="frm_primary_label">Phone
-														<span class="frm_required" aria-hidden="true">*</span>
-													</label>
-													<input type="tel" id="field_3s3p1" name="item_meta[17]" value=""
-														data-reqmsg="Phone cannot be blank." aria-required="true"
-														data-invmsg="Phone is invalid" aria-invalid="false"
-														pattern="((\+\d{1,3}(-|.| )?\(?\d\)?(-| |.)?\d{1,5})|(\(?\d{2,6}\)?))(-|.| )?(\d{3,4})(-|.| )?(\d{4})(( x| ext)\d{1,5}){0,1}$">
+								.vol-textarea {
+									resize: vertical;
+									min-height: 100px;
+								}
 
+								.vol-check-group {
+									display: flex;
+									flex-direction: column;
+									gap: 10px;
+									background: rgba(255, 255, 255, 0.5);
+									padding: 16px;
+									border-radius: 8px;
+									border: 1px solid rgba(255, 255, 255, 0.4);
+								}
 
-												</div>
-												<div id="frm_field_18_container"
-													class="frm_form_field form-field  frm_required_field frm_top_container">
-													<label for="field_v8a2y" id="field_v8a2y_label"
-														class="frm_primary_label">Age
-														<span class="frm_required" aria-hidden="true">*</span>
-													</label>
-													<input type="number" id="field_v8a2y" name="item_meta[18]" value=""
-														data-reqmsg="Age cannot be blank." aria-required="true"
-														data-invmsg="Age is invalid" aria-invalid="false" min="0"
-														max="9999999" step="any">
+								.vol-check-label {
+									display: flex;
+									align-items: center;
+									gap: 10px;
+									font-size: 14px;
+									cursor: pointer;
+									font-weight: 500;
+									color: #444;
+									transition: color 0.2s ease;
+								}
 
+								.vol-check-label:hover {
+									color: #0073aa;
+								}
 
-												</div>
-												<div id="frm_field_19_container"
-													class="frm_form_field form-field  frm_required_field frm_top_container vertical_radio">
-													<div id="field_evpun_label" class="frm_primary_label">Preferred
-														Volunteer Role
-														<span class="frm_required" aria-hidden="true">*</span>
-													</div>
-													<div class="frm_opt_container" aria-labelledby="field_evpun_label"
-														role="group">
-														<div class="frm_checkbox" id="frm_checkbox_19-0"> <label
-																for="field_evpun-0">
-																<input type="checkbox" name="item_meta[19][]"
-																	id="field_evpun-0" value="Teaching and Mentoring"
-																	data-reqmsg="Preferred Volunteer Role cannot be blank."
-																	data-invmsg="Preferred Volunteer Role is invalid"
-																	aria-invalid="false" aria-required="true"> Teaching
-																and Mentoring</label></div>
-														<div class="frm_checkbox" id="frm_checkbox_19-1"> <label
-																for="field_evpun-1">
-																<input type="checkbox" name="item_meta[19][]"
-																	id="field_evpun-1"
-																	value="Event planning and coordination"
-																	data-reqmsg="Preferred Volunteer Role cannot be blank."
-																	data-invmsg="Preferred Volunteer Role is invalid"
-																	aria-invalid="false"> Event planning and
-																coordination</label></div>
-														<div class="frm_checkbox" id="frm_checkbox_19-2"> <label
-																for="field_evpun-2">
-																<input type="checkbox" name="item_meta[19][]"
-																	id="field_evpun-2" value="Childcare Support"
-																	data-reqmsg="Preferred Volunteer Role cannot be blank."
-																	data-invmsg="Preferred Volunteer Role is invalid"
-																	aria-invalid="false"> Childcare Support</label>
-														</div>
-														<div class="frm_checkbox" id="frm_checkbox_19-3"> <label
-																for="field_evpun-3">
-																<input type="checkbox" name="item_meta[19][]"
-																	id="field_evpun-3" value="Administrative Support"
-																	data-reqmsg="Preferred Volunteer Role cannot be blank."
-																	data-invmsg="Preferred Volunteer Role is invalid"
-																	aria-invalid="false"> Administrative Support</label>
-														</div>
-														<div class="frm_checkbox" id="frm_checkbox_19-4"> <label
-																for="field_evpun-4">
-																<input type="checkbox" name="item_meta[19][]"
-																	id="field_evpun-4"
-																	value="Social Media and Marketing"
-																	data-reqmsg="Preferred Volunteer Role cannot be blank."
-																	data-invmsg="Preferred Volunteer Role is invalid"
-																	aria-invalid="false"> Social Media and
-																Marketing</label></div>
-														<div class="frm_checkbox" id="frm_checkbox_19-5"> <label
-																for="field_evpun-5">
-																<input type="checkbox" name="item_meta[19][]"
-																	id="field_evpun-5"
-																	value="Fundraising and Donor Relations"
-																	data-reqmsg="Preferred Volunteer Role cannot be blank."
-																	data-invmsg="Preferred Volunteer Role is invalid"
-																	aria-invalid="false"> Fundraising and Donor
-																Relations</label></div>
-													</div>
+								.vol-check-label input[type=checkbox] {
+									width: 18px;
+									height: 18px;
+									accent-color: #0073aa;
+									cursor: pointer;
+									border-radius: 4px;
+									flex-shrink: 0;
+								}
 
+								.vol-submit-btn {
+									background: linear-gradient(135deg, #0073aa 0%, #005a87 100%);
+									color: white;
+									padding: 16px 32px;
+									border: none;
+									border-radius: 8px;
+									font-size: 16px;
+									font-weight: 700;
+									cursor: pointer;
+									transition: all 0.3s ease;
+									box-shadow: 0 4px 15px rgba(0, 115, 170, 0.3);
+									text-transform: uppercase;
+									letter-spacing: 0.5px;
+									align-self: flex-start;
+									margin-top: 10px;
+								}
 
-												</div>
-												<div id="frm_field_20_container"
-													class="frm_form_field form-field  frm_required_field frm_top_container vertical_radio">
-													<div id="field_32jcy_label" class="frm_primary_label">Days Available
-														<span class="frm_required" aria-hidden="true">*</span>
-													</div>
-													<div class="frm_opt_container" aria-labelledby="field_32jcy_label"
-														role="group">
-														<div class="frm_checkbox" id="frm_checkbox_20-0"> <label
-																for="field_32jcy-0">
-																<input type="checkbox" name="item_meta[20][]"
-																	id="field_32jcy-0" value="Monday"
-																	data-reqmsg="Days Available cannot be blank."
-																	data-invmsg="Days Available is invalid"
-																	aria-invalid="false" aria-required="true">
-																Monday</label></div>
-														<div class="frm_checkbox" id="frm_checkbox_20-1"> <label
-																for="field_32jcy-1">
-																<input type="checkbox" name="item_meta[20][]"
-																	id="field_32jcy-1" value="Tuesday"
-																	data-reqmsg="Days Available cannot be blank."
-																	data-invmsg="Days Available is invalid"
-																	aria-invalid="false"> Tuesday</label></div>
-														<div class="frm_checkbox" id="frm_checkbox_20-2"> <label
-																for="field_32jcy-2">
-																<input type="checkbox" name="item_meta[20][]"
-																	id="field_32jcy-2" value="Wednesday"
-																	data-reqmsg="Days Available cannot be blank."
-																	data-invmsg="Days Available is invalid"
-																	aria-invalid="false"> Wednesday</label></div>
-														<div class="frm_checkbox" id="frm_checkbox_20-3"> <label
-																for="field_32jcy-3">
-																<input type="checkbox" name="item_meta[20][]"
-																	id="field_32jcy-3" value="Thursday"
-																	data-reqmsg="Days Available cannot be blank."
-																	data-invmsg="Days Available is invalid"
-																	aria-invalid="false"> Thursday</label></div>
-														<div class="frm_checkbox" id="frm_checkbox_20-4"> <label
-																for="field_32jcy-4">
-																<input type="checkbox" name="item_meta[20][]"
-																	id="field_32jcy-4" value="Friday"
-																	data-reqmsg="Days Available cannot be blank."
-																	data-invmsg="Days Available is invalid"
-																	aria-invalid="false"> Friday</label></div>
-														<div class="frm_checkbox" id="frm_checkbox_20-5"> <label
-																for="field_32jcy-5">
-																<input type="checkbox" name="item_meta[20][]"
-																	id="field_32jcy-5" value="Saturday"
-																	data-reqmsg="Days Available cannot be blank."
-																	data-invmsg="Days Available is invalid"
-																	aria-invalid="false"> Saturday</label></div>
-														<div class="frm_checkbox" id="frm_checkbox_20-6"> <label
-																for="field_32jcy-6">
-																<input type="checkbox" name="item_meta[20][]"
-																	id="field_32jcy-6" value="Sunday"
-																	data-reqmsg="Days Available cannot be blank."
-																	data-invmsg="Days Available is invalid"
-																	aria-invalid="false"> Sunday</label></div>
-													</div>
+								.vol-submit-btn:hover {
+									transform: translateY(-2px);
+									box-shadow: 0 6px 20px rgba(0, 115, 170, 0.4);
+									filter: brightness(1.1);
+								}
 
+								.vol-submit-btn:disabled {
+									background: #ccc;
+									box-shadow: none;
+									cursor: not-allowed;
+									transform: none;
+									filter: none;
+								}
 
-												</div>
-												<div id="frm_field_21_container"
-													class="frm_form_field form-field  frm_required_field frm_top_container">
-													<label for="field_if54v" id="field_if54v_label"
-														class="frm_primary_label">Previous Volunteer Experience
-														<span class="frm_required" aria-hidden="true">*</span>
-													</label>
-													<textarea name="item_meta[21]" id="field_if54v" rows="5"
-														data-reqmsg="Previous Volunteer Experience cannot be blank."
-														aria-required="true"
-														data-invmsg="Previous Volunteer Experience is invalid"
-														aria-invalid="false"></textarea>
+								#vol-success-msg {
+									visibility: hidden;
+									opacity: 0;
+									height: 0;
+									overflow: hidden;
+									background: #e8f5e9;
+									color: #2e7d32;
+									border: 1px solid #c8e6c9;
+									padding: 0 15px;
+									border-radius: 8px;
+									margin-top: 0;
+									text-align: center;
+									font-weight: 600;
+									font-size: 15px;
+									transition: all 0.3s ease;
+								}
 
+								#vol-success-msg.visible {
+									visibility: visible;
+									opacity: 1;
+									height: auto;
+									padding: 15px;
+									margin-top: 20px;
+								}
 
-												</div>
-												<div id="frm_field_22_container"
-													class="frm_form_field form-field  frm_required_field frm_top_container">
-													<label for="field_dh8q7" id="field_dh8q7_label"
-														class="frm_primary_label">Volunteer Certifications
-														<span class="frm_required" aria-hidden="true">*</span>
-													</label>
-													<textarea name="item_meta[22]" id="field_dh8q7" rows="5"
-														data-reqmsg="Volunteer Certifications cannot be blank."
-														aria-required="true"
-														data-invmsg="Volunteer Certifications is invalid"
-														aria-invalid="false"></textarea>
+								@media(max-width:768px) {
+									.vol-submit-btn {
+										width: 100%;
+										text-align: center;
+									}
+								}
+							</style>
 
+							<!-- NOTE: novalidate prevents browser default submission behavior entirely -->
+							<form class="vol-form" id="volForm" novalidate>
+								<input type="hidden" name="_subject"
+									value="New Volunteer Application - Wings of Care Foundation">
+								<input type="text" name="_gotcha" style="display:none">
 
-												</div>
-												<div id="frm_field_23_container"
-													class="frm_form_field form-field  frm_required_field frm_top_container">
-													<label for="field_lduz9" id="field_lduz9_label"
-														class="frm_primary_label">Briefly help us know why you'd like to
-														volunteer.
-														<span class="frm_required" aria-hidden="true">*</span>
-													</label>
-													<textarea name="item_meta[23]" id="field_lduz9" rows="5"
-														data-reqmsg="Briefly help us know why you'd like to volunteer. cannot be blank."
-														aria-required="true"
-														data-invmsg="Briefly help us know why you'd like to volunteer. is invalid"
-														aria-invalid="false"></textarea>
-
-
-												</div>
-												<div id="frm_field_13_container" class="frm_form_field form-field ">
-													<div class="frm_submit frm_flex">
-														<button class="frm_button_submit" type="submit">Submit</button>
-
-
-
-													</div>
-												</div>
-												<input type="hidden" name="item_key" value="">
-												<div class="frm__6799f72df41e9">
-													<label for="frm_email_3">
-														If you are human, leave this field blank. </label>
-													<input id="frm_email_3" type="text" class="frm_verify"
-														name="frm__6799f72df41e9" value="" autocomplete="off">
-												</div>
-											</div>
-										</fieldset>
+								<div class="vol-row">
+									<div class="vol-col">
+										<label class="vol-label" for="v_first">First Name *</label>
+										<input type="text" id="v_first" name="first_name" class="vol-input" required
+											placeholder="First name">
 									</div>
+									<div class="vol-col">
+										<label class="vol-label" for="v_last">Last Name *</label>
+										<input type="text" id="v_last" name="last_name" class="vol-input" required
+											placeholder="Last name">
+									</div>
+								</div>
 
-								</form>
-							</div>
+								<div class="vol-field">
+									<label class="vol-label" for="v_email">Email *</label>
+									<input type="email" id="v_email" name="email" class="vol-input" required
+										placeholder="you@example.com">
+								</div>
+
+								<div class="vol-field">
+									<label class="vol-label" for="v_phone">Phone *</label>
+									<input type="tel" id="v_phone" name="phone" class="vol-input" required
+										placeholder="+256...">
+								</div>
+
+								<div class="vol-field">
+									<label class="vol-label" for="v_age">Age *</label>
+									<input type="number" id="v_age" name="age" min="0" class="vol-input" required
+										placeholder="Your age">
+								</div>
+
+								<div class="vol-field">
+									<label class="vol-label">Preferred Volunteer Role *</label>
+									<div class="vol-check-group">
+										<label class="vol-check-label"><input type="checkbox" name="preferred_role[]"
+												value="Teaching and Mentoring"> Teaching and Mentoring</label>
+										<label class="vol-check-label"><input type="checkbox" name="preferred_role[]"
+												value="Event planning and coordination"> Event planning and
+											coordination</label>
+										<label class="vol-check-label"><input type="checkbox" name="preferred_role[]"
+												value="Childcare Support"> Childcare Support</label>
+										<label class="vol-check-label"><input type="checkbox" name="preferred_role[]"
+												value="Administrative Support"> Administrative Support</label>
+										<label class="vol-check-label"><input type="checkbox" name="preferred_role[]"
+												value="Social Media and Marketing"> Social Media and Marketing</label>
+										<label class="vol-check-label"><input type="checkbox" name="preferred_role[]"
+												value="Fundraising and Donor Relations"> Fundraising and Donor
+											Relations</label>
+									</div>
+								</div>
+
+								<div class="vol-field">
+									<label class="vol-label">Days Available *</label>
+									<div class="vol-check-group">
+										<label class="vol-check-label"><input type="checkbox" name="days_available[]"
+												value="Monday"> Monday</label>
+										<label class="vol-check-label"><input type="checkbox" name="days_available[]"
+												value="Tuesday"> Tuesday</label>
+										<label class="vol-check-label"><input type="checkbox" name="days_available[]"
+												value="Wednesday"> Wednesday</label>
+										<label class="vol-check-label"><input type="checkbox" name="days_available[]"
+												value="Thursday"> Thursday</label>
+										<label class="vol-check-label"><input type="checkbox" name="days_available[]"
+												value="Friday"> Friday</label>
+										<label class="vol-check-label"><input type="checkbox" name="days_available[]"
+												value="Saturday"> Saturday</label>
+										<label class="vol-check-label"><input type="checkbox" name="days_available[]"
+												value="Sunday"> Sunday</label>
+									</div>
+								</div>
+
+								<div class="vol-field">
+									<label class="vol-label" for="v_exp">Previous Volunteer Experience *</label>
+									<textarea id="v_exp" name="previous_experience" class="vol-textarea" rows="4"
+										required placeholder="Describe your past volunteer work..."></textarea>
+								</div>
+
+								<div class="vol-field">
+									<label class="vol-label" for="v_certs">Volunteer Certifications *</label>
+									<textarea id="v_certs" name="certifications" class="vol-textarea" rows="4" required
+										placeholder="List any relevant certifications..."></textarea>
+								</div>
+
+								<div class="vol-field">
+									<label class="vol-label" for="v_motivation">Why would you like to volunteer?
+										*</label>
+									<textarea id="v_motivation" name="motivation" class="vol-textarea" rows="4" required
+										placeholder="Tell us what motivates you..."></textarea>
+								</div>
+
+								<!-- type="button" PHYSICALLY CANNOT trigger page reload/scroll -->
+								<button type="button" class="vol-submit-btn" id="volBtn">Submit Application</button>
+
+								<div id="vol-success-msg">
+									Thank you! Your volunteer application has been received. We will contact you
+									shortly.
+								</div>
+							</form>
 						</div>
 					</div>
 				</div>
+
+				<script>
+					(function () {
+						const btn = document.getElementById("volBtn");
+						const form = document.getElementById("volForm");
+						const msg = document.getElementById("vol-success-msg");
+
+						if (btn && form) {
+							btn.addEventListener("click", async function (e) {
+								// Prevent ANY default behavior immediately
+								e.preventDefault();
+								e.stopImmediatePropagation();
+
+								// --- MANUAL VALIDATION (Mimics Native HTML5) ---
+								let isValid = true;
+								const requiredInputs = form.querySelectorAll('[required]');
+
+								// Clear previous errors
+								requiredInputs.forEach(input => input.classList.remove('error'));
+
+								// Check Text/Email/Number inputs
+								requiredInputs.forEach(input => {
+									if (input.type !== 'checkbox') {
+										if (!input.value.trim()) {
+											input.classList.add('error');
+											isValid = false;
+										} else if (input.type === 'email') {
+											const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+											if (!emailRegex.test(input.value)) {
+												input.classList.add('error');
+												isValid = false;
+											}
+										}
+									}
+								});
+
+								// Check Checkbox Groups manually
+								const roleGroup = form.querySelector('input[name="preferred_role[]"]');
+								const daysGroup = form.querySelector('input[name="days_available[]"]');
+
+								if (roleGroup && !form.querySelector('input[name="preferred_role[]"]:checked')) {
+									// Highlight the whole group container visually
+									roleGroup.closest('.vol-check-group').style.border = '1px solid #dc3545';
+									isValid = false;
+								} else if (roleGroup) {
+									roleGroup.closest('.vol-check-group').style.border = '';
+								}
+
+								if (daysGroup && !form.querySelector('input[name="days_available[]"]:checked')) {
+									daysGroup.closest('.vol-check-group').style.border = '1px solid #dc3545';
+									isValid = false;
+								} else if (daysGroup) {
+									daysGroup.closest('.vol-check-group').style.border = '';
+								}
+
+								// Stop execution if invalid (NO ALERTS, just visual cues)
+								if (!isValid) return;
+
+								// --- SUBMISSION LOGIC ---
+								const originalText = btn.innerText;
+								btn.innerText = "Sending...";
+								btn.disabled = true;
+
+								const formData = new FormData(form);
+								const data = {};
+								for (const [key, value] of formData.entries()) {
+									if (key.endsWith("[]")) {
+										if (!data[key]) data[key] = [];
+										data[key].push(value);
+									} else {
+										data[key] = value;
+									}
+								}
+
+								try {
+									const res = await fetch("https://formsubmit.co/ajax/martinmutyaba68@gmail.com", {
+										method: "POST",
+										headers: { "Content-Type": "application/json" },
+										body: JSON.stringify(data)
+									});
+
+									if (res.ok) {
+										msg.classList.add("visible");
+										form.reset();
+										// Reset checkbox group borders after success
+										document.querySelectorAll('.vol-check-group').forEach(g => g.style.border = '');
+										setTimeout(() => msg.classList.remove("visible"), 10000);
+									} else {
+										alert("Something went wrong. Please try again.");
+									}
+								} catch (err) {
+									alert("Network error. Please check your connection.");
+								} finally {
+									btn.innerText = originalText;
+									btn.disabled = false;
+								}
+							});
+						}
+					})();
+				</script>
 			</div>
 		</div>
 		<div class="elementor-element elementor-element-73b6366 e-flex e-con-boxed wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no e-con e-parent"
@@ -1810,7 +1897,8 @@
 						<div class="elementor-widget-container">
 							<div class="eael-dual-header">
 								<h2 class="title"><span class="lead solid-color">Frequently Asked </span>
-									<span>Questions</span></h2>
+									<span>Questions</span>
+								</h2>
 								<div class="eael-dch-separator-wrap"><span class="separator-one"></span>
 									<span class="separator-two"></span>
 								</div> <span class="subtext"></span>
@@ -2804,7 +2892,8 @@
 						<div class="elementor-element elementor-element-08c37ac exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-text-editor"
 							data-id="08c37ac" data-element_type="widget" data-widget_type="text-editor.default">
 							<div class="elementor-widget-container">
-								<p>Designed &amp; Developed by &ndash; <a href="https://www.linkedin.com/in/enprecious/" target="_blank">Manuel
+								<p>Designed &amp; Developed by &ndash; <a href="https://www.linkedin.com/in/enprecious/"
+										target="_blank">Manuel
 										Precious</a></p>
 							</div>
 						</div>
