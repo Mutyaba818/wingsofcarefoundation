@@ -1,0 +1,5 @@
+[2025-04-10 23:37:10 : INFO] - Pruning the Cache log file 
+[2025-04-12 20:06:10 : INFO] - Pruning the Cache log file 
+[2025-04-17 00:35:55 : INFO] - Cache for URL: https://wingsofcarefoundation.com/?p=696 has been purged, triggered by action: save_post 
+[2025-04-17 00:35:55 : INFO] - Cache for blog post has been purged due to updates to post with Title: "Auto Draft" and URL: https://wingsofcarefoundation.com/?p=696, triggered by action: save_post 
+[2025-04-17 00:35:55 : INFO] - Cache for all archives page associated with post_type: post and Title: "Auto Draft" have been purged, triggered by action: save_post 

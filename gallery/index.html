@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Wings Of Care Foundation Gallery &ndash; Wings of Care Foundation</title>
+	<meta name="robots" content="max-image-preview:large">
+	<link rel="alternate" type="application/rss+xml" title="Wings of Care Foundation &raquo; Feed"
+		href="../../feed/index.html">
+	<link rel="alternate" type="application/rss+xml" title="Wings of Care Foundation &raquo; Comments Feed"
+		href="../../comments/feed/index.html">
+
+	<!-- Google Fonts for Editorial Typography -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,700;1,900&display=swap"
+		rel="stylesheet">
+
+	<style>
+		:root {
+			--wp-block-synced-color: #7a00df;
+			--wp-block-synced-color--rgb: 122, 0, 223;
+		}
+
+		body {
+			margin: 0;
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+			background-color: #000000;
+			color: #f3f4f6;
+		}
+
+		.skip-link {
+			position: absolute;
+			clip: rect(1px, 1px, 1px, 1px);
+			padding: 0;
+			border: 0;
+			height: 1px;
+			width: 1px;
+			overflow: hidden;
+		}
+
+		.skip-link:focus {
+			background: #eee;
+			clip: auto;
+			height: auto;
+			width: auto;
+			padding: 15px;
+			z-index: 100000;
+		}
+
+		/* Gallery Page Wrapper Styles (PURE BLACK THEME) */
+		.ct-container-full {
+			max-width: 1350px;
+			margin: 40px auto;
+			padding: 0 20px;
+		}
+
+		.hero-section {
+			text-align: left;
+			margin-bottom: 25px;
+		}
+
+		.page-title {
+			font-size: 2.2rem;
+			font-weight: 700;
+			color: #ffffff;
+			margin-bottom: 0;
+		}
+
+		/* Pure Black Editorial Inner Gallery Container */
+		.dark-gallery-container {
+			background-color: #000000;
+			border-radius: 12px;
+			padding: 10px 0;
+			margin-bottom: 30px;
+		}
+
+		/* Refined 3-Column Balanced Grid (6 items = exactly 2 rows per page) */
+		.custom-gallery-grid {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 36px 24px;
+		}
+
+		@media (max-width: 900px) {
+			.custom-gallery-grid {
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
+
+		@media (max-width: 600px) {
+			.custom-gallery-grid {
+				grid-template-columns: 1fr;
+			}
+		}
+
+		/* Card Styles */
+		.gallery-item {
+			display: flex;
+			flex-direction: column;
+			cursor: pointer;
+			text-decoration: none;
+		}
+
+		.gallery-item .image-frame {
+			width: 100%;
+			aspect-ratio: 16 / 10;
+			overflow: hidden;
+			border-radius: 6px;
+			background: #0a0a0a;
+			position: relative;
+			border: 1px solid rgba(255, 255, 255, 0.12);
+			box-shadow: 0 8px 24px rgba(0, 0, 0, 0.8);
+			transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+		}
+
+		.gallery-item:hover .image-frame {
+			border-color: rgba(255, 255, 255, 0.4);
+			transform: translateY(-4px);
+			box-shadow: 0 12px 30px rgba(0, 0, 0, 0.9);
+		}
+
+		/* Full Natural Color */
+		.gallery-item img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			display: block;
+			filter: none;
+			transition: transform 0.4s ease;
+		}
+
+		.gallery-item:hover img {
+			transform: scale(1.05);
+		}
+
+		/* Card Typography & Labels */
+		.gallery-item .card-meta {
+			margin-top: 14px;
+		}
+
+		.gallery-item .category-label {
+			font-family: 'Inter', sans-serif;
+			font-size: 11px;
+			font-weight: 700;
+			letter-spacing: 2px;
+			color: #9ca3af;
+			text-transform: uppercase;
+			margin-bottom: 6px;
+			display: block;
+		}
+
+		.gallery-item .editorial-title {
+			font-family: 'Playfair Display', serif;
+			font-size: 1.4rem;
+			font-weight: 900;
+			font-style: italic;
+			line-height: 1.1;
+			color: #ffffff;
+			text-transform: uppercase;
+			letter-spacing: -0.5px;
+			margin: 0;
+			transition: color 0.3s ease;
+		}
+
+		.gallery-item:hover .editorial-title {
+			color: #dbbe8f;
+		}
+
+		/* Pagination Styling (PURE BLACK MATCHED) */
+		.gallery-pagination {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 12px;
+			margin: 30px 0 20px 0;
+			font-size: 14px;
+			font-weight: 600;
+		}
+
+		.gallery-pagination button,
+		.gallery-pagination span.page-info {
+			padding: 10px 18px;
+			border: 1px solid rgba(255, 255, 255, 0.2);
+			background: #0d0d0d;
+			color: #ffffff;
+			border-radius: 4px;
+			cursor: pointer;
+			transition: background 0.2s, color 0.2s, border-color 0.2s;
+		}
+
+		.gallery-pagination button:hover:not(:disabled) {
+			background: #dbbe8f;
+			color: #000000;
+			border-color: #dbbe8f;
+		}
+
+		.gallery-pagination button:disabled {
+			opacity: 0.25;
+			cursor: not-allowed;
+		}
+
+		.gallery-pagination span.page-info {
+			cursor: default;
+			background: #000000;
+			border-color: rgba(255, 255, 255, 0.12);
+			color: #9ca3af;
+		}
+
+		/* Lightbox Modal Overlay */
+		.lightbox-modal {
+			display: none;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.95);
+			backdrop-filter: blur(8px);
+			z-index: 99999;
+			justify-content: center;
+			align-items: center;
+			padding: 20px;
+			box-sizing: border-box;
+		}
+
+		.lightbox-modal.active {
+			display: flex;
+		}
+
+		.lightbox-content {
+			position: relative;
+			max-width: 90%;
+			max-height: 90vh;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.lightbox-content img {
+			max-width: 100%;
+			max-height: 78vh;
+			object-fit: contain;
+			border-radius: 4px;
+			box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9);
+			border: 1px solid rgba(255, 255, 255, 0.15);
+		}
+
+		.lightbox-caption {
+			margin-top: 14px;
+			font-family: 'Playfair Display', serif;
+			font-size: 1.4rem;
+			font-style: italic;
+			color: #ffffff;
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		.lightbox-close,
+		.lightbox-prev,
+		.lightbox-next {
+			position: absolute;
+			background: rgba(255, 255, 255, 0.15);
+			color: #fff;
+			border: 1px solid rgba(255, 255, 255, 0.2);
+			font-size: 20px;
+			cursor: pointer;
+			padding: 10px 16px;
+			border-radius: 50%;
+			transition: background 0.2s, transform 0.2s;
+			user-select: none;
+		}
+
+		.lightbox-close:hover,
+		.lightbox-prev:hover,
+		.lightbox-next:hover {
+			background: rgba(255, 255, 255, 0.35);
+		}
+
+		.lightbox-close {
+			top: -45px;
+			right: 0;
+			border-radius: 4px;
+			font-size: 18px;
+			padding: 6px 12px;
+		}
+
+		.lightbox-prev {
+			left: -60px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		.lightbox-next {
+			right: -60px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		@media (max-width: 768px) {
+			.lightbox-prev {
+				left: 10px;
+			}
+
+			.lightbox-next {
+				right: 10px;
+			}
+
+			.lightbox-close {
+				top: -45px;
+				right: 10px;
+			}
+		}
+	</style>
+
+	<link rel="icon" href="../../wp-content/uploads/2025/01/Untitled-design-1-150x150.png" sizes="32x32">
+	<link rel="icon" href="../../wp-content/uploads/2025/01/Untitled-design-1-300x300.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="../../wp-content/uploads/2025/01/Untitled-design-1-300x300.png">
+</head>
+
+<body class="wp-singular wp-custom-logo wp-embed-responsive">
+	<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
+
+	<!-- Header Section (Preserved with Increased Font Size) -->
+	<div class="ekit-template-content-markup ekit-template-content-header ekit-template-content-theme-support">
+		<style>
+			.elementor-10 {
+				background-color: #000;
+				position: sticky;
+				top: 0;
+				z-index: 1000;
+				width: 100%;
+			}
+
+			.elementor-10 .elementor-element.elementor-element-f19078a {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+				padding: 18px 40px;
+				max-width: 1280px;
+				margin: 0 auto;
+				box-sizing: border-box;
+			}
+
+			.elementor-10 .elementor-element.elementor-element-8205bcc img {
+				width: 135px;
+				height: auto;
+				display: block;
+			}
+
+			.elementskit-navbar-nav {
+				list-style: none;
+				display: flex;
+				gap: 30px;
+				margin: 0;
+				padding: 0;
+				align-items: center;
+			}
+
+			.elementskit-navbar-nav li a {
+				color: #FFFFFF;
+				text-decoration: none;
+				font-size: 1.15rem;
+				font-weight: 500;
+				transition: color 0.2s;
+			}
+
+			.elementskit-navbar-nav li a:hover {
+				color: #DBBE8F;
+			}
+
+			.elementor-button {
+				background-color: #FFECB3;
+				color: #000000;
+				padding: 10px 22px;
+				border-radius: 4px;
+				text-decoration: none;
+				font-size: 1.05rem;
+				font-weight: 600;
+				white-space: nowrap;
+				display: inline-block;
+			}
+
+			/* Mobile Hamburger Toggle Button */
+			.elementskit-menu-hamburger {
+				display: none;
+				flex-direction: column;
+				justify-content: space-between;
+				width: 28px;
+				height: 20px;
+				background: transparent;
+				border: none;
+				cursor: pointer;
+				padding: 0;
+				z-index: 1001;
+			}
+
+			.elementskit-menu-hamburger-icon {
+				display: block;
+				height: 3px;
+				width: 100%;
+				background-color: #FFFFFF;
+				border-radius: 2px;
+				transition: all 0.3s ease;
+			}
+
+			/* Mobile Drawer Identity / Close Button Panel */
+			.elementskit-nav-identity-panel {
+				display: none;
+			}
+
+			/* Dark Overlay Backdrop */
+			.elementskit-menu-overlay {
+				display: none;
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100vw;
+				height: 100vh;
+				background: rgba(0, 0, 0, 0.7);
+				z-index: 1001;
+				opacity: 0;
+				transition: opacity 0.3s ease;
+			}
+
+			.elementskit-menu-overlay.active {
+				display: block;
+				opacity: 1;
+			}
+
+			/* --- RESPONSIVE MEDIA QUERIES --- */
+			@media(max-width: 1024px) {
+				.elementor-10 .elementor-element.elementor-element-f19078a {
+					padding: 14px 20px;
+				}
+
+				.elementor-10 .elementor-element.elementor-element-8205bcc img {
+					width: 110px;
+				}
+
+				.elementskit-menu-hamburger {
+					display: flex;
+				}
+
+				/* Slide-out Off-Canvas Navigation Menu */
+				.elementskit-menu-container {
+					position: fixed;
+					top: 0;
+					right: -300px;
+					width: 280px;
+					height: 100vh;
+					background-color: #0a0a0a;
+					z-index: 1002;
+					padding: 70px 25px 30px 25px;
+					box-sizing: border-box;
+					transition: right 0.3s ease-in-out;
+					box-shadow: -5px 0 20px rgba(0, 0, 0, 0.8);
+				}
+
+				.elementskit-menu-container.active {
+					right: 0;
+				}
+
+				.elementskit-navbar-nav {
+					flex-direction: column;
+					align-items: flex-start;
+					gap: 20px;
+				}
+
+				.elementskit-navbar-nav li {
+					width: 100%;
+				}
+
+				.elementskit-navbar-nav li a {
+					font-size: 1.25rem;
+					display: block;
+					padding: 8px 0;
+					border-bottom: 1px solid #1a1a1a;
+				}
+
+				/* Mobile Close Button */
+				.elementskit-nav-identity-panel {
+					display: flex;
+					justify-content: flex-end;
+					position: absolute;
+					top: 20px;
+					right: 20px;
+				}
+
+				.elementskit-menu-close {
+					background: #FFFFFF;
+					border: 2px dashed #000000;
+					color: #000000;
+					padding: 4px 10px;
+					font-weight: bold;
+					font-size: 14px;
+					cursor: pointer;
+					border-radius: 4px;
+				}
+
+				.elementor-button {
+					font-size: 0.95rem;
+					padding: 8px 16px;
+				}
+			}
+
+			@media(max-width: 480px) {
+				.elementor-10 .elementor-element.elementor-element-8205bcc img {
+					width: 95px;
+				}
+			}
+		</style>
+
+		<div class="elementor elementor-10">
+			<div class="elementor-element elementor-element-f19078a" data-id="f19078a">
+
+				<!-- Logo -->
+				<div class="elementor-element elementor-element-8205bcc">
+					<div class="elementor-widget-container">
+						<a href="../../index.html">
+							<img src="../../wp-content/uploads/2025/01/wingslogo-1.png" title="wingslogo" alt="Logo">
+						</a>
+					</div>
+				</div>
+
+				<!-- Navigation & Mobile Off-canvas Drawer -->
+				<div class="elementor-element elementor-element-3e6e597">
+					<div class="elementor-widget-container">
+						<nav class="ekit-wid-con">
+							<!-- Mobile Hamburger Button Trigger -->
+							<button class="elementskit-menu-hamburger" id="menu-hamburger-toggle" type="button"
+								aria-label="Toggle Navigation">
+								<span class="elementskit-menu-hamburger-icon"></span>
+								<span class="elementskit-menu-hamburger-icon"></span>
+								<span class="elementskit-menu-hamburger-icon"></span>
+							</button>
+
+							<!-- Menu Container / Drawer -->
+							<div id="ekit-megamenu-mobile-menu" class="elementskit-menu-container">
+								<div class="elementskit-nav-identity-panel">
+									<button class="elementskit-menu-close" id="menu-close-toggle"
+										type="button">X</button>
+								</div>
+								<ul class="elementskit-navbar-nav">
+									<li><a href="../../volunteers/index.html">Volunteers</a></li>
+									<li><a href="../../news-events/index.html">News &amp; Events</a></li>
+									<li><a href="../../gallery/index.html" style="color: #DBBE8F;">Gallery</a></li>
+									<li><a href="../../about-us/index.html">About Us</a></li>
+									<li><a href="../../contact-us/index.html">Contact Us</a></li>
+								</ul>
+							</div>
+
+							<!-- Background Overlay for Mobile Menu -->
+							<div class="elementskit-menu-overlay" id="menu-overlay"></div>
+						</nav>
+					</div>
+				</div>
+
+				<!-- Donate Button -->
+				<div class="elementor-element elementor-element-e1f8d21">
+					<div class="elementor-widget-container">
+						<a class="elementor-button" href="../../donate/index.html">Donate</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Interactive Mobile Toggle JavaScript -->
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const hamburgerBtn = document.getElementById("menu-hamburger-toggle");
+				const closeBtn = document.getElementById("menu-close-toggle");
+				const menuDrawer = document.getElementById("ekit-megamenu-mobile-menu");
+				const overlay = document.getElementById("menu-overlay");
+
+				function openMenu() {
+					menuDrawer.classList.add("active");
+					overlay.classList.add("active");
+					document.body.style.overflow = "hidden"; // Prevents background scroll when menu is open
+				}
+
+				function closeMenu() {
+					menuDrawer.classList.remove("active");
+					overlay.classList.remove("active");
+					document.body.style.overflow = "";
+				}
+
+				if (hamburgerBtn) hamburgerBtn.addEventListener("click", openMenu);
+				if (closeBtn) closeBtn.addEventListener("click", closeMenu);
+				if (overlay) overlay.addEventListener("click", closeMenu);
+			});
+		</script>
+	</div>
+
+	<!-- Main Gallery Content Area -->
+	<div class="ct-container-full" id="main">
+		<article id="post-476" class="post-476">
+			<div class="hero-section">
+				<header class="entry-header">
+					<h1 class="page-title" itemprop="headline">Wings Of Care Foundation Gallery</h1>
+				</header>
+			</div>
+
+			<!-- Pure Black Editorial Gallery Container -->
+			<div class="dark-gallery-container">
+				<div id="dynamic-gallery-grid" class="custom-gallery-grid">
+					<!-- Injected via JavaScript -->
+				</div>
+			</div>
+
+			<!-- Pure Black Pagination Controls -->
+			<div id="gallery-pagination" class="gallery-pagination">
+				<!-- Injected via JavaScript -->
+			</div>
+		</article>
+	</div>
+
+	<!-- Lightbox Modal Container -->
+	<div id="lightbox-modal" class="lightbox-modal">
+		<div class="lightbox-content">
+			<button class="lightbox-close" id="lightbox-close">&times;</button>
+			<button class="lightbox-prev" id="lightbox-prev">&#10094;</button>
+			<img id="lightbox-img" src="" alt="Enlarged Gallery View">
+			<div id="lightbox-caption" class="lightbox-caption"></div>
+			<button class="lightbox-next" id="lightbox-next">&#10095;</button>
+		</div>
+	</div>
+
+	<!-- Footer Section (Preserved with Increased Font Size) -->
+	<div data-elementor-type="wp-post" data-elementor-id="16" class="elementor elementor-16">
+		<style>
+			.elementor-16 .elementor-element.elementor-element-04b89eb {
+				position: relative;
+				background-image: url("../wp-content/uploads/2025/01/hands-2888625_1280.jpg");
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				padding-top: 80px;
+				padding-bottom: 40px;
+			}
+
+			.elementor-16 .elementor-element.elementor-element-04b89eb::before {
+				content: "";
+				position: absolute;
+				inset: 0;
+				background-color: rgba(0, 0, 0, 0.88);
+				z-index: 1;
+			}
+
+			.elementor-16 .elementor-element.elementor-element-04b89eb>.e-con-inner {
+				position: relative;
+				z-index: 2;
+				max-width: 1200px;
+				margin: 0 auto;
+				width: 100%;
+			}
+
+			.elementor-16 .elementor-element.elementor-element-d7422f6 {
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+				gap: 30px;
+				width: 100%;
+				margin-bottom: 50px;
+			}
+
+			@media (max-width: 1024px) {
+				.elementor-16 .elementor-element.elementor-element-d7422f6 {
+					grid-template-columns: repeat(2, 1fr);
+				}
+			}
+
+			@media (max-width: 767px) {
+				.elementor-16 .elementor-element.elementor-element-d7422f6 {
+					grid-template-columns: 1fr;
+				}
+			}
+
+			.elementor-16 .elementor-heading-title {
+				color: #FFFFFF !important;
+				font-family: 'Playfair Display', serif;
+				font-size: 1.25rem;
+				margin-bottom: 20px;
+			}
+
+			/* --- REMOVE BULLET DOTS & LINK UNDERLINES --- */
+			.elementor-16 ul.elementor-icon-list-items {
+				list-style: none !important;
+				list-style-type: none !important;
+				padding-left: 0 !important;
+				margin: 0 !important;
+			}
+
+			.elementor-16 .elementor-icon-list-item {
+				list-style: none !important;
+				margin-bottom: 10px;
+			}
+
+			.elementor-16 .elementor-icon-list-item a {
+				text-decoration: none !important;
+			}
+
+			.elementor-16 .elementor-icon-list-item a:hover {
+				text-decoration: none !important;
+				color: #FFECB3 !important;
+			}
+
+			/* ------------------------------------------- */
+
+			.elementor-16 .elementor-icon-list-text,
+			.elementor-16 .elementor-widget-text-editor p {
+				color: #AAA8A8 !important;
+				font-size: 14px;
+				line-height: 1.8;
+			}
+
+			.elementor-16 .elementor-element-7780c63 {
+				text-align: center;
+				margin: 40px auto;
+				max-width: 450px;
+			}
+
+			.elementor-16 .elementor-element-7780c63 img {
+				width: 100%;
+				height: auto;
+				border-radius: 4px;
+				border: 1px solid rgba(255, 255, 255, 0.1);
+			}
+
+			#footer-text {
+				text-align: center;
+				color: #FFFFFF;
+				padding: 15px;
+				font-size: 15px;
+				border-top: 1px solid rgba(255, 255, 255, 0.1);
+				margin-top: 20px;
+			}
+
+			.elementor-element-08c37ac {
+				text-align: center;
+				color: #AAA8A8;
+				font-size: 14px;
+				padding-bottom: 10px;
+			}
+
+			.elementor-element-08c37ac a {
+				color: #FFECB3;
+				text-decoration: none !important;
+			}
+		</style>
+
+		<div class="elementor-element elementor-element-04b89eb e-flex e-con-boxed wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no e-con e-parent"
+			data-id="04b89eb" data-element_type="container" data-settings='{"background_background":"classic"}'>
+			<div class="e-con-inner">
+				<div class="elementor-element elementor-element-560f629 e-con-full e-flex wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no e-con e-child"
+					data-id="560f629" data-element_type="container">
+					<div class="elementor-element elementor-element-e74604e e-con-full e-flex wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no e-con e-child"
+						data-id="e74604e" data-element_type="container">
+
+						<!-- 4-Column Footer Grid Layout -->
+						<div class="elementor-element elementor-element-d7422f6 e-grid e-con-full wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no e-con e-child"
+							data-id="d7422f6" data-element_type="container">
+
+							<!-- Column 1: Logo & Bio -->
+							<div class="elementor-element elementor-element-5ea1649 e-con-full e-flex wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no e-con e-child"
+								data-id="5ea1649" data-element_type="container">
+								<div class="elementor-element elementor-element-1608ecd e-con-full e-flex wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no e-con e-child"
+									data-id="1608ecd" data-element_type="container">
+									<div class="elementor-element elementor-element-7fb52de exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-tl-site-logo"
+										data-id="7fb52de" data-element_type="widget"
+										data-widget_type="tl-site-logo.default">
+										<div class="elementor-widget-container">
+											<a href="../index.html"><img
+													src="../wp-content/uploads/2025/01/wingslogo-1.png"
+													title="wingslogo (1)" alt=""
+													class="attachment-full size-full wp-image-558"
+													style="max-width: 140px;" loading="lazy"></a>
+										</div>
+									</div>
+								</div>
+								<div class="elementor-element elementor-element-f7d0673 exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-text-editor"
+									data-id="f7d0673" data-element_type="widget" data-widget_type="text-editor.default">
+									<div class="elementor-widget-container">
+										<p>Spreading hope, one child at a time, building brighter futures through care,
+											love, and community support.</p>
+									</div>
+								</div>
+							</div>
+
+							<!-- Column 2: Links -->
+							<div class="elementor-element elementor-element-74b9c7e e-con-full e-flex wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no e-con e-child"
+								data-id="74b9c7e" data-element_type="container">
+								<div class="elementor-element elementor-element-9da724a exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-heading"
+									data-id="9da724a" data-element_type="widget" data-widget_type="heading.default">
+									<div class="elementor-widget-container">
+										<h2 class="elementor-heading-title elementor-size-default">Links</h2>
+									</div>
+								</div>
+								<div class="elementor-element elementor-element-3a84e50 elementor-align-left elementor-icon-list--layout-traditional elementor-list-item-link-full_width exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-icon-list"
+									data-id="3a84e50" data-element_type="widget" data-widget_type="icon-list.default">
+									<div class="elementor-widget-container">
+										<ul class="elementor-icon-list-items">
+											<li class="elementor-icon-list-item">
+												<a href="../news-events/index.html">
+													<span class="elementor-icon-list-text">News &amp; Events</span>
+												</a>
+											</li>
+											<li class="elementor-icon-list-item">
+												<a href="../contact-us/index.html">
+													<span class="elementor-icon-list-text">Contact Us</span>
+												</a>
+											</li>
+											<li class="elementor-icon-list-item">
+												<a href="../about-us/index.html">
+													<span class="elementor-icon-list-text">About us</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<!-- Column 3: Non-Profit -->
+							<div class="elementor-element elementor-element-b4507ab e-con-full e-flex wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no e-con e-child"
+								data-id="b4507ab" data-element_type="container">
+								<div class="elementor-element elementor-element-f897089 exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-heading"
+									data-id="f897089" data-element_type="widget" data-widget_type="heading.default">
+									<div class="elementor-widget-container">
+										<h2 class="elementor-heading-title elementor-size-default">Non-Profit</h2>
+									</div>
+								</div>
+								<div class="elementor-element elementor-element-ea4f5b1 elementor-align-left elementor-icon-list--layout-traditional elementor-list-item-link-full_width exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-icon-list"
+									data-id="ea4f5b1" data-element_type="widget" data-widget_type="icon-list.default">
+									<div class="elementor-widget-container">
+										<ul class="elementor-icon-list-items">
+											<li class="elementor-icon-list-item">
+												<a href="../donate/index.html">
+													<span class="elementor-icon-list-text">Donate</span>
+												</a>
+											</li>
+											<li class="elementor-icon-list-item">
+												<a href="../volunteer/index.html">
+													<span class="elementor-icon-list-text">Volunteer</span>
+												</a>
+											</li>
+											<li class="elementor-icon-list-item">
+												<a href="../gallery/index.html">
+													<span class="elementor-icon-list-text">Gallery</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+
+							<!-- Column 4: Contact -->
+							<div class="elementor-element elementor-element-27891ee e-con-full e-flex wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no e-con e-child"
+								data-id="27891ee" data-element_type="container">
+								<div class="elementor-element elementor-element-cb19b08 exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-heading"
+									data-id="cb19b08" data-element_type="widget" data-widget_type="heading.default">
+									<div class="elementor-widget-container">
+										<h2 class="elementor-heading-title elementor-size-default">Contact</h2>
+									</div>
+								</div>
+								<div class="elementor-element elementor-element-18f4a4f elementor-align-left elementor-icon-list--layout-traditional elementor-list-item-link-full_width exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-icon-list"
+									data-id="18f4a4f" data-element_type="widget" data-widget_type="icon-list.default">
+									<div class="elementor-widget-container">
+										<ul class="elementor-icon-list-items">
+											<li class="elementor-icon-list-item">
+												<span class="elementor-icon-list-text">Tel 1: +256763958683</span>
+											</li>
+											<li class="elementor-icon-list-item">
+												<span class="elementor-icon-list-text">Tel 2: +256772229622</span>
+											</li>
+											<li class="elementor-icon-list-item">
+												<a href="mailto:info@wingsofcarefoundation.com">
+													<span
+														class="elementor-icon-list-text">info@wingsofcarefoundation.com</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="elementor-element elementor-element-b98d747 exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-text-editor"
+									data-id="b98d747" data-element_type="widget" data-widget_type="text-editor.default">
+									<div class="elementor-widget-container">
+										<p>Kawempe A, Magajo, Nansana,<br>Wakiso, Uganda</p>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<!-- Certificate of Incorporation Section -->
+					<div class="elementor-element elementor-element-dd5ad30 e-con-full e-flex wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no e-con e-child"
+						data-id="dd5ad30" data-element_type="container">
+						<div class="elementor-element elementor-element-ffad05a e-grid e-con-full wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no e-con e-child"
+							data-id="ffad05a" data-element_type="container">
+							<div class="elementor-element elementor-element-7780c63 e-con-full e-flex wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no e-con e-child"
+								data-id="7780c63" data-element_type="container">
+								<div class="elementor-element elementor-element-694c38b exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-heading"
+									data-id="694c38b" data-element_type="widget" data-widget_type="heading.default">
+									<div class="elementor-widget-container">
+										<h2 class="elementor-heading-title elementor-size-default"
+											style="text-align: center;">Certificate of Incorporation</h2>
+									</div>
+								</div>
+								<div class="elementor-element elementor-element-ca825ea exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-image"
+									data-id="ca825ea" data-element_type="widget" data-widget_type="image.default">
+									<div class="elementor-widget-container" style="text-align: center;">
+										<a href="../wp-content/uploads/2025/01/REGISTRATION_CERTIFICATE1.pdf"
+											target="_blank">
+											<img width="792" height="560"
+												src="../wp-content/uploads/2025/01/cert_incorp.png"
+												class="attachment-large size-large wp-image-659" alt=""> </a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Copyright & Credits Footer Bar -->
+					<div class="elementor-element elementor-element-f7bac2c exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-html"
+						data-id="f7bac2c" data-element_type="widget" data-widget_type="html.default">
+						<div class="elementor-widget-container">
+							<p id="footer-text">Copyright &copy; 2022 - <span id="current-year"></span> Wings Of Care
+								Foundation | All Rights Reserved.</p>
+							<script>
+								document.getElementById("current-year").textContent = new Date().getFullYear();
+							</script>
+						</div>
+					</div>
+
+					<div class="elementor-element elementor-element-08c37ac exad-sticky-section-no exad-glass-effect-no elementor-widget elementor-widget-text-editor"
+						data-id="08c37ac" data-element_type="widget" data-widget_type="text-editor.default">
+						<div class="elementor-widget-container">
+							<p>Designed &amp; Developed by &ndash; <a href="https://www.linkedin.com/in/enprecious/"
+									target="_blank">Manuel Precious</a></p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Dynamic Gallery & Lightbox Script -->
+	<script>
+		document.getElementById("current-year").textContent = new Date().getFullYear();
+
+		// Editorial Category & Title metadata generator
+		const editorialTitles = [
+			{ dept: "DEPARTMENT: COMMUNITY OUTREACH", title: "CARE &amp; HOPE." },
+			{ dept: "DEPARTMENT: FOUNDATION ARCHIVES", title: "COMMUNITY FOCUS." },
+			{ dept: "DEPARTMENT: YOUTH DEVELOPMENT", title: "BRIGHT FUTURES." },
+			{ dept: "DEPARTMENT: HEALTH &amp; NUTRITION", title: "MOMENTS OF JOY." },
+			{ dept: "DEPARTMENT: EDITORIAL CANVAS", title: "LEARNING TOGETHER." },
+			{ dept: "DEPARTMENT: FIELD OPERATIONS", title: "DISCOVERY JOURNEY." },
+			{ dept: "DEPARTMENT: COMMUNITY OUTREACH", title: "EMPOWERMENT VIBES." },
+			{ dept: "DEPARTMENT: EDITORIAL CANVAS", title: "FAITH &amp; DEVOTION." },
+			{ dept: "DEPARTMENT: FOUNDATION ARCHIVES", title: "UNITED AS ONE." },
+			{ dept: "DEPARTMENT: YOUTH DEVELOPMENT", title: "CREATIVE LEARNING." },
+			{ dept: "DEPARTMENT: HEALTH &amp; NUTRITION", title: "SUSTAINABLE LIVES." },
+			{ dept: "DEPARTMENT: FIELD OPERATIONS", title: "CARE IN ACTION." },
+			{ dept: "DEPARTMENT: ADVANCED LAB", title: "FUTURE LEADERS." },
+			{ dept: "DEPARTMENT: COMMUNITY OUTREACH", title: "HOPE RESTORED." },
+			{ dept: "DEPARTMENT: EDITORIAL CANVAS", title: "JOURNAL MOMENTS." }
+		];
+
+		// Complete list of 30 gallery images preserved with original paths
+		const galleryImages = [
+			{ id: 1, src: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/1.png", thumb: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/thumb/1.png" },
+			{ id: 2, src: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/2.png", thumb: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/thumb/2.png" },
+			{ id: 3, src: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/33.png", thumb: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/thumb/33.png" },
+			{ id: 4, src: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/32.png", thumb: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/thumb/32.png" },
+			{ id: 5, src: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/31.png", thumb: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/thumb/31.png" },
+			{ id: 6, src: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/30.png", thumb: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/thumb/30.png" },
+			{ id: 7, src: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/29.png", thumb: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/thumb/29.png" },
+			{ id: 8, src: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/28.png", thumb: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/thumb/28.png" },
+			{ id: 9, src: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/27.png", thumb: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/thumb/27.png" },
+			{ id: 10, src: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/26.png", thumb: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/thumb/26.png" },
+			{ id: 11, src: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/16.png", thumb: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/thumb/16.png" },
+			{ id: 12, src: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/17.png", thumb: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/thumb/17.png" },
+			{ id: 13, src: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/18.png", thumb: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/thumb/18.png" },
+			{ id: 14, src: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/19.png", thumb: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/thumb/19.png" },
+			{ id: 15, src: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/20.png", thumb: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/thumb/20.png" },
+			{ id: 16, src: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/21.png", thumb: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/thumb/21.png" },
+			{ id: 17, src: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/22.png", thumb: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/thumb/22.png" },
+			{ id: 18, src: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/23.png", thumb: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/thumb/23.png" },
+			{ id: 19, src: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/24.png", thumb: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/thumb/24.png" },
+			{ id: 20, src: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/25.png", thumb: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/thumb/25.png" },
+			{ id: 21, src: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/15.png", thumb: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/thumb/15.png" },
+			{ id: 22, src: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/14.png", thumb: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/thumb/14.png" },
+			{ id: 23, src: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/13.png", thumb: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/thumb/13.png" },
+			{ id: 24, src: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/12.png", thumb: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/thumb/12.png" },
+			{ id: 25, src: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/11.png", thumb: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/thumb/11.png" },
+			{ id: 26, src: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/10.png", thumb: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/thumb/10.png" },
+			{ id: 27, src: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/9.png", thumb: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/thumb/9.png" },
+			{ id: 28, src: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/8.png", thumb: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/thumb/8.png" },
+			{ id: 29, src: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/7.png", thumb: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/thumb/7.png" },
+			{ id: 30, src: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/6.png", thumb: "../../wp-content/uploads/photo-gallery/imported_from_media_libray/thumb/6.png" }
+		];
+
+		const itemsPerPage = 6;
+		let currentPage = 1;
+		let currentIndex = 0;
+
+		const gridContainer = document.getElementById("dynamic-gallery-grid");
+		const paginationContainer = document.getElementById("gallery-pagination");
+		const lightboxModal = document.getElementById("lightbox-modal");
+		const lightboxImg = document.getElementById("lightbox-img");
+		const lightboxCaption = document.getElementById("lightbox-caption");
+		const lightboxClose = document.getElementById("lightbox-close");
+		const lightboxPrev = document.getElementById("lightbox-prev");
+		const lightboxNext = document.getElementById("lightbox-next");
+
+		function renderGallery(page) {
+			currentPage = page;
+			gridContainer.innerHTML = "";
+			const start = (page - 1) * itemsPerPage;
+			const end = start + itemsPerPage;
+			const currentItems = galleryImages.slice(start, end);
+
+			currentItems.forEach((imgObj, index) => {
+				const globalIndex = start + index;
+				const metaInfo = editorialTitles[globalIndex % editorialTitles.length];
+
+				const itemDiv = document.createElement("div");
+				itemDiv.className = "gallery-item";
+				itemDiv.innerHTML = `
+					<div class="image-frame">
+						<img src="${imgObj.thumb}" alt="${metaInfo.title}" loading="lazy">
+					</div>
+					<div class="card-meta">
+						<span class="category-label">${metaInfo.dept}</span>
+						<h3 class="editorial-title">${metaInfo.title}</h3>
+					</div>
+				`;
+				itemDiv.addEventListener("click", () => openLightbox(globalIndex));
+				gridContainer.appendChild(itemDiv);
+			});
+
+			renderPagination();
+		}
+
+		function renderPagination() {
+			const totalPages = Math.ceil(galleryImages.length / itemsPerPage);
+			paginationContainer.innerHTML = "";
+
+			// Previous Button
+			const prevBtn = document.createElement("button");
+			prevBtn.innerHTML = "&laquo; Prev";
+			prevBtn.disabled = currentPage === 1;
+			prevBtn.addEventListener("click", () => {
+				if (currentPage > 1) {
+					renderGallery(currentPage - 1);
+					window.scrollTo({ top: document.getElementById('main').offsetTop - 20, behavior: 'smooth' });
+				}
+			});
+			paginationContainer.appendChild(prevBtn);
+
+			// Page Indicator
+			const infoSpan = document.createElement("span");
+			infoSpan.className = "page-info";
+			infoSpan.textContent = `Page ${currentPage} of ${totalPages}`;
+			paginationContainer.appendChild(infoSpan);
+
+			// Next Button
+			const nextBtn = document.createElement("button");
+			nextBtn.innerHTML = "Next &raquo;";
+			nextBtn.disabled = currentPage === totalPages;
+			nextBtn.addEventListener("click", () => {
+				if (currentPage < totalPages) {
+					renderGallery(currentPage + 1);
+					window.scrollTo({ top: document.getElementById('main').offsetTop - 20, behavior: 'smooth' });
+				}
+			});
+			paginationContainer.appendChild(nextBtn);
+		}
+
+		function openLightbox(index) {
+			currentIndex = index;
+			updateLightboxContent();
+			lightboxModal.classList.add("active");
+		}
+
+		function updateLightboxContent() {
+			const imgObj = galleryImages[currentIndex];
+			const metaInfo = editorialTitles[currentIndex % editorialTitles.length];
+			lightboxImg.src = imgObj.src;
+			lightboxCaption.innerHTML = metaInfo.title;
+		}
+
+		function closeLightbox() {
+			lightboxModal.classList.remove("active");
+		}
+
+		function showPrevImage() {
+			currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+			updateLightboxContent();
+		}
+
+		function showNextImage() {
+			currentIndex = (currentIndex + 1) % galleryImages.length;
+			updateLightboxContent();
+		}
+
+		// Event Listeners for Lightbox
+		lightboxClose.addEventListener("click", closeLightbox);
+		lightboxPrev.addEventListener("click", showPrevImage);
+		lightboxNext.addEventListener("click", showNextImage);
+
+		lightboxModal.addEventListener("click", (e) => {
+			if (e.target === lightboxModal) closeLightbox();
+		});
+
+		document.addEventListener("keydown", (e) => {
+			if (!lightboxModal.classList.contains("active")) return;
+			if (e.key === "Escape") closeLightbox();
+			if (e.key === "ArrowLeft") showPrevImage();
+			if (e.key === "ArrowRight") showNextImage();
+		});
+
+		// Initialize Gallery on load
+		renderGallery(1);
+	</script>
+</body>
+
+</html>

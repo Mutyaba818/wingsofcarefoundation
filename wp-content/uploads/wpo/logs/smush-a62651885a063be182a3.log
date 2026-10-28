@@ -1,0 +1,147 @@
+[2025-02-01 19:49:23 : INFO] - Re_Smush_It_Task server status: Online 
+[2025-02-01 19:49:24 : INFO] - A total of 19 tasks of type smush found and will be processed in this iteration 
+[2025-02-01 19:49:24 : DEBUG] - Lock option (updraft_lock_smush, wp_options) was created in the database 
+[2025-02-01 19:49:24 : INFO] - Lock (updraft_lock_smush, wp_options) acquired after initialising the database 
+[2025-02-01 19:49:24 : INFO] - Processing task with ID : 333, and type 'smush' 
+[2025-02-01 19:49:24 : INFO] - Re_Smush_It_Task - Attachment ID : 137, Started on : February 01, 2025 07:49:24 
+[2025-02-01 19:49:24 : INFO] - File: erasebg-transformed-1.png, Compression quality: 92 
+[2025-02-01 19:49:26 : INFO] - Backing up the original image - 2025/01/erasebg-transformed-1-updraft-pre-smush-original.png 
+[2025-02-01 19:49:29 : INFO] - There were no WebP conversion tools found on your server. 
+[2025-02-01 19:49:29 : INFO] - Successfully optimized the image - /home/u400650983/domains/wingsofcarefoundation.com/public_html/wp-content/uploads/2025/01/erasebg-transformed-1.png.The file was compressed from 658.48 KB to 147.12 KB, saving 77.66 percent, using WP-Optimize 
+[2025-02-01 19:49:29 : INFO] - Completed processing task with ID : 333, and type 'smush' 
+[2025-02-01 19:49:29 : INFO] - Processing task with ID : 334, and type 'smush' 
+[2025-02-01 19:49:29 : INFO] - Re_Smush_It_Task - Attachment ID : 146, Started on : February 01, 2025 07:49:24 
+[2025-02-01 19:49:29 : INFO] - File: rb_2148402787.png, Compression quality: 92 
+[2025-02-01 19:49:30 : INFO] - Backing up the original image - 2025/01/rb_2148402787-updraft-pre-smush-original.png 
+[2025-02-01 19:49:34 : INFO] - There were no WebP conversion tools found on your server. 
+[2025-02-01 19:49:34 : INFO] - Successfully optimized the image - /home/u400650983/domains/wingsofcarefoundation.com/public_html/wp-content/uploads/2025/01/rb_2148402787.png.The file was compressed from 173.43 KB to 163.88 KB, saving 5.51 percent, using WP-Optimize 
+[2025-02-01 19:49:34 : INFO] - Completed processing task with ID : 334, and type 'smush' 
+[2025-02-01 19:49:34 : INFO] - Processing task with ID : 335, and type 'smush' 
+[2025-02-01 19:49:34 : INFO] - Re_Smush_It_Task - Attachment ID : 175, Started on : February 01, 2025 07:49:24 
+[2025-02-01 19:49:34 : INFO] - File: 3.png, Compression quality: 92 
+[2025-02-01 19:49:36 : INFO] - Backing up the original image - 2025/01/3-updraft-pre-smush-original.png 
+[2025-02-01 19:49:38 : INFO] - There were no WebP conversion tools found on your server. 
+[2025-02-01 19:49:38 : INFO] - Successfully optimized the image - /home/u400650983/domains/wingsofcarefoundation.com/public_html/wp-content/uploads/2025/01/3.png.The file was compressed from 602.81 KB to 178.33 KB, saving 70.42 percent, using WP-Optimize 
+[2025-02-01 19:49:38 : INFO] - Completed processing task with ID : 335, and type 'smush' 
+[2025-02-01 19:49:38 : INFO] - Processing task with ID : 336, and type 'smush' 
+[2025-02-01 19:49:38 : INFO] - Re_Smush_It_Task - Attachment ID : 176, Started on : February 01, 2025 07:49:24 
+[2025-02-01 19:49:38 : INFO] - File: 4.png, Compression quality: 92 
+[2025-02-01 19:49:39 : INFO] - Backing up the original image - 2025/01/4-updraft-pre-smush-original.png 
+[2025-02-01 19:49:41 : INFO] - There were no WebP conversion tools found on your server. 
+[2025-02-01 19:49:41 : INFO] - Successfully optimized the image - /home/u400650983/domains/wingsofcarefoundation.com/public_html/wp-content/uploads/2025/01/4.png.The file was compressed from 629.70 KB to 209.61 KB, saving 66.71 percent, using WP-Optimize 
+[2025-02-01 19:49:41 : INFO] - Completed processing task with ID : 336, and type 'smush' 
+[2025-02-01 19:49:41 : INFO] - Processing task with ID : 337, and type 'smush' 
+[2025-02-01 19:49:41 : INFO] - Re_Smush_It_Task - Attachment ID : 177, Started on : February 01, 2025 07:49:24 
+[2025-02-01 19:49:41 : INFO] - File: 5.png, Compression quality: 92 
+[2025-02-01 19:49:43 : INFO] - Backing up the original image - 2025/01/5-updraft-pre-smush-original.png 
+[2025-02-01 19:49:45 : INFO] - There were no WebP conversion tools found on your server. 
+[2025-02-01 19:49:45 : INFO] - Successfully optimized the image - /home/u400650983/domains/wingsofcarefoundation.com/public_html/wp-content/uploads/2025/01/5.png.The file was compressed from 701.52 KB to 240.55 KB, saving 65.71 percent, using WP-Optimize 
+[2025-02-01 19:49:45 : INFO] - Completed processing task with ID : 337, and type 'smush' 
+[2025-02-01 19:49:45 : INFO] - Processing task with ID : 338, and type 'smush' 
+[2025-02-01 19:49:45 : INFO] - Re_Smush_It_Task - Attachment ID : 178, Started on : February 01, 2025 07:49:24 
+[2025-02-01 19:49:45 : INFO] - File: 6.png, Compression quality: 92 
+[2025-02-01 19:49:47 : INFO] - Backing up the original image - 2025/01/6-updraft-pre-smush-original.png 
+[2025-02-01 19:49:49 : INFO] - There were no WebP conversion tools found on your server. 
+[2025-02-01 19:49:49 : INFO] - Successfully optimized the image - /home/u400650983/domains/wingsofcarefoundation.com/public_html/wp-content/uploads/2025/01/6.png.The file was compressed from 784.62 KB to 237.76 KB, saving 69.7 percent, using WP-Optimize 
+[2025-02-01 19:49:49 : INFO] - Completed processing task with ID : 338, and type 'smush' 
+[2025-02-01 19:49:49 : INFO] - Processing task with ID : 339, and type 'smush' 
+[2025-02-01 19:49:49 : INFO] - Re_Smush_It_Task - Attachment ID : 179, Started on : February 01, 2025 07:49:24 
+[2025-02-01 19:49:49 : INFO] - File: 7.png, Compression quality: 92 
+[2025-02-01 19:49:51 : INFO] - Backing up the original image - 2025/01/7-updraft-pre-smush-original.png 
+[2025-02-01 19:49:53 : INFO] - There were no WebP conversion tools found on your server. 
+[2025-02-01 19:49:53 : INFO] - Successfully optimized the image - /home/u400650983/domains/wingsofcarefoundation.com/public_html/wp-content/uploads/2025/01/7.png.The file was compressed from 696.09 KB to 204.84 KB, saving 70.57 percent, using WP-Optimize 
+[2025-02-01 19:49:53 : INFO] - Completed processing task with ID : 339, and type 'smush' 
+[2025-02-01 19:49:53 : INFO] - Processing task with ID : 340, and type 'smush' 
+[2025-02-01 19:49:53 : INFO] - Re_Smush_It_Task - Attachment ID : 180, Started on : February 01, 2025 07:49:24 
+[2025-02-01 19:49:53 : INFO] - File: 8.png, Compression quality: 92 
+[2025-02-01 19:49:54 : INFO] - Backing up the original image - 2025/01/8-updraft-pre-smush-original.png 
+[2025-02-01 19:49:56 : INFO] - There were no WebP conversion tools found on your server. 
+[2025-02-01 19:49:56 : INFO] - Successfully optimized the image - /home/u400650983/domains/wingsofcarefoundation.com/public_html/wp-content/uploads/2025/01/8.png.The file was compressed from 706.88 KB to 205.81 KB, saving 70.88 percent, using WP-Optimize 
+[2025-02-01 19:49:56 : INFO] - Completed processing task with ID : 340, and type 'smush' 
+[2025-02-01 19:49:56 : INFO] - Processing task with ID : 341, and type 'smush' 
+[2025-02-01 19:49:56 : INFO] - Re_Smush_It_Task - Attachment ID : 181, Started on : February 01, 2025 07:49:24 
+[2025-02-01 19:49:56 : INFO] - File: 9.png, Compression quality: 92 
+[2025-02-01 19:49:58 : INFO] - Backing up the original image - 2025/01/9-updraft-pre-smush-original.png 
+[2025-02-01 19:50:00 : INFO] - There were no WebP conversion tools found on your server. 
+[2025-02-01 19:50:00 : INFO] - Successfully optimized the image - /home/u400650983/domains/wingsofcarefoundation.com/public_html/wp-content/uploads/2025/01/9.png.The file was compressed from 701.48 KB to 189.00 KB, saving 73.06 percent, using WP-Optimize 
+[2025-02-01 19:50:00 : INFO] - Completed processing task with ID : 341, and type 'smush' 
+[2025-02-01 19:50:00 : INFO] - Processing task with ID : 342, and type 'smush' 
+[2025-02-01 19:50:00 : INFO] - Re_Smush_It_Task - Attachment ID : 182, Started on : February 01, 2025 07:49:24 
+[2025-02-01 19:50:00 : INFO] - File: 10.png, Compression quality: 92 
+[2025-02-01 19:50:02 : INFO] - Backing up the original image - 2025/01/10-updraft-pre-smush-original.png 
+[2025-02-01 19:50:04 : INFO] - There were no WebP conversion tools found on your server. 
+[2025-02-01 19:50:04 : INFO] - Successfully optimized the image - /home/u400650983/domains/wingsofcarefoundation.com/public_html/wp-content/uploads/2025/01/10.png.The file was compressed from 655.31 KB to 182.10 KB, saving 72.21 percent, using WP-Optimize 
+[2025-02-01 19:50:04 : INFO] - Completed processing task with ID : 342, and type 'smush' 
+[2025-02-01 19:50:04 : INFO] - Processing task with ID : 343, and type 'smush' 
+[2025-02-01 19:50:04 : INFO] - Re_Smush_It_Task - Attachment ID : 184, Started on : February 01, 2025 07:49:24 
+[2025-02-01 19:50:04 : INFO] - File: 12.png, Compression quality: 92 
+[2025-02-01 19:50:06 : INFO] - Backing up the original image - 2025/01/12-updraft-pre-smush-original.png 
+[2025-02-01 19:50:08 : INFO] - There were no WebP conversion tools found on your server. 
+[2025-02-01 19:50:08 : INFO] - Successfully optimized the image - /home/u400650983/domains/wingsofcarefoundation.com/public_html/wp-content/uploads/2025/01/12.png.The file was compressed from 734.03 KB to 200.60 KB, saving 72.67 percent, using WP-Optimize 
+[2025-02-01 19:50:08 : INFO] - Completed processing task with ID : 343, and type 'smush' 
+[2025-02-01 19:50:08 : INFO] - Processing task with ID : 344, and type 'smush' 
+[2025-02-01 19:50:08 : INFO] - Re_Smush_It_Task - Attachment ID : 185, Started on : February 01, 2025 07:49:24 
+[2025-02-01 19:50:08 : INFO] - File: 13.png, Compression quality: 92 
+[2025-02-01 19:50:09 : INFO] - Backing up the original image - 2025/01/13-updraft-pre-smush-original.png 
+[2025-02-01 19:50:12 : INFO] - There were no WebP conversion tools found on your server. 
+[2025-02-01 19:50:12 : INFO] - Successfully optimized the image - /home/u400650983/domains/wingsofcarefoundation.com/public_html/wp-content/uploads/2025/01/13.png.The file was compressed from 763.24 KB to 230.41 KB, saving 69.81 percent, using WP-Optimize 
+[2025-02-01 19:50:12 : INFO] - Completed processing task with ID : 344, and type 'smush' 
+[2025-02-01 19:50:12 : INFO] - Processing task with ID : 345, and type 'smush' 
+[2025-02-01 19:50:12 : INFO] - Re_Smush_It_Task - Attachment ID : 186, Started on : February 01, 2025 07:49:24 
+[2025-02-01 19:50:12 : INFO] - File: 14.png, Compression quality: 92 
+[2025-02-01 19:50:13 : INFO] - Backing up the original image - 2025/01/14-updraft-pre-smush-original.png 
+[2025-02-01 19:50:15 : INFO] - There were no WebP conversion tools found on your server. 
+[2025-02-01 19:50:15 : INFO] - Successfully optimized the image - /home/u400650983/domains/wingsofcarefoundation.com/public_html/wp-content/uploads/2025/01/14.png.The file was compressed from 704.29 KB to 198.42 KB, saving 71.83 percent, using WP-Optimize 
+[2025-02-01 19:50:15 : INFO] - Completed processing task with ID : 345, and type 'smush' 
+[2025-02-01 19:50:15 : INFO] - Processing task with ID : 346, and type 'smush' 
+[2025-02-01 19:50:15 : INFO] - Re_Smush_It_Task - Attachment ID : 187, Started on : February 01, 2025 07:49:24 
+[2025-02-01 19:50:15 : INFO] - File: 15.png, Compression quality: 92 
+[2025-02-01 19:50:17 : INFO] - Backing up the original image - 2025/01/15-updraft-pre-smush-original.png 
+[2025-02-01 19:50:19 : INFO] - There were no WebP conversion tools found on your server. 
+[2025-02-01 19:50:19 : INFO] - Successfully optimized the image - /home/u400650983/domains/wingsofcarefoundation.com/public_html/wp-content/uploads/2025/01/15.png.The file was compressed from 745.72 KB to 217.65 KB, saving 70.81 percent, using WP-Optimize 
+[2025-02-01 19:50:19 : INFO] - Completed processing task with ID : 346, and type 'smush' 
+[2025-02-01 19:50:19 : INFO] - Processing task with ID : 347, and type 'smush' 
+[2025-02-01 19:50:19 : INFO] - Re_Smush_It_Task - Attachment ID : 188, Started on : February 01, 2025 07:49:24 
+[2025-02-01 19:50:19 : INFO] - File: 1.png, Compression quality: 92 
+[2025-02-01 19:50:21 : INFO] - Backing up the original image - 2025/01/1-updraft-pre-smush-original.png 
+[2025-02-01 19:50:23 : INFO] - There were no WebP conversion tools found on your server. 
+[2025-02-01 19:50:23 : INFO] - Successfully optimized the image - /home/u400650983/domains/wingsofcarefoundation.com/public_html/wp-content/uploads/2025/01/1.png.The file was compressed from 779.06 KB to 227.41 KB, saving 70.81 percent, using WP-Optimize 
+[2025-02-01 19:50:23 : INFO] - Completed processing task with ID : 347, and type 'smush' 
+[2025-02-01 19:50:23 : INFO] - Processing task with ID : 348, and type 'smush' 
+[2025-02-01 19:50:23 : INFO] - Re_Smush_It_Task - Attachment ID : 189, Started on : February 01, 2025 07:49:24 
+[2025-02-01 19:50:23 : INFO] - File: 2.png, Compression quality: 92 
+[2025-02-01 19:50:24 : INFO] - A total of 4 tasks of type smush found and will be processed in this iteration 
+[2025-02-01 19:50:24 : DEBUG] - Lock option (updraft_lock_smush, wp_options) already existed in the database 
+[2025-02-01 19:50:24 : INFO] - Lock (updraft_lock_smush, wp_options) could not be acquired (it is locked) 
+[2025-02-01 19:50:24 : INFO] - Failed to gain semaphore lock (smush) - another process is already processing the queue - aborting (if this is wrong - i.e. if the other process crashed without removing the lock, then another can be started after 1 minute 
+[2025-02-01 19:50:24 : INFO] - Cleaning up tasks of type (smush). A total of 15 tasks will be deleted. 
+[2025-02-01 19:50:25 : INFO] - Backing up the original image - 2025/01/2-updraft-pre-smush-original.png 
+[2025-02-01 19:50:27 : INFO] - There were no WebP conversion tools found on your server. 
+[2025-02-01 19:50:27 : INFO] - Successfully optimized the image - /home/u400650983/domains/wingsofcarefoundation.com/public_html/wp-content/uploads/2025/01/2.png.The file was compressed from 787.00 KB to 217.37 KB, saving 72.38 percent, using WP-Optimize 
+[2025-02-01 19:50:27 : INFO] - Completed processing task with ID : 348, and type 'smush' 
+[2025-02-01 19:50:27 : INFO] - Processing task with ID : 349, and type 'smush' 
+[2025-02-01 19:50:27 : INFO] - Re_Smush_It_Task - Attachment ID : 309, Started on : February 01, 2025 07:49:24 
+[2025-02-01 19:50:27 : INFO] - File: pngegg13-768x768-1.png, Compression quality: 92 
+[2025-02-01 19:50:28 : INFO] - Backing up the original image - 2025/02/pngegg13-768x768-1-updraft-pre-smush-original.png 
+[2025-02-01 19:50:29 : INFO] - There were no WebP conversion tools found on your server. 
+[2025-02-01 19:50:29 : INFO] - Successfully optimized the image - /home/u400650983/domains/wingsofcarefoundation.com/public_html/wp-content/uploads/2025/02/pngegg13-768x768-1.png.The file was compressed from 68.41 KB to 35.48 KB, saving 48.13 percent, using WP-Optimize 
+[2025-02-01 19:50:29 : INFO] - Completed processing task with ID : 349, and type 'smush' 
+[2025-02-01 19:50:29 : INFO] - Processing task with ID : 350, and type 'smush' 
+[2025-02-01 19:50:29 : INFO] - Re_Smush_It_Task - Attachment ID : 343, Started on : February 01, 2025 07:49:24 
+[2025-02-01 19:50:29 : INFO] - File: 8a18b415-object-3.png, Compression quality: 92 
+[2025-02-01 19:50:29 : INFO] - Backing up the original image - 2025/02/8a18b415-object-3-updraft-pre-smush-original.png 
+[2025-02-01 19:50:29 : INFO] - There were no WebP conversion tools found on your server. 
+[2025-02-01 19:50:29 : INFO] - Successfully optimized the image - /home/u400650983/domains/wingsofcarefoundation.com/public_html/wp-content/uploads/2025/02/8a18b415-object-3.png.The file was compressed from 5.31 KB to 5.31 KB, saving 0 percent, using WP-Optimize 
+[2025-02-01 19:50:29 : INFO] - Completed processing task with ID : 350, and type 'smush' 
+[2025-02-01 19:50:29 : INFO] - Processing task with ID : 351, and type 'smush' 
+[2025-02-01 19:50:29 : INFO] - Re_Smush_It_Task - Attachment ID : 360, Started on : February 01, 2025 07:49:24 
+[2025-02-01 19:50:29 : INFO] - File: pngegg-15.png, Compression quality: 92 
+[2025-02-01 19:50:30 : INFO] - Backing up the original image - 2025/02/pngegg-15-updraft-pre-smush-original.png 
+[2025-02-01 19:50:31 : INFO] - There were no WebP conversion tools found on your server. 
+[2025-02-01 19:50:31 : INFO] - Successfully optimized the image - /home/u400650983/domains/wingsofcarefoundation.com/public_html/wp-content/uploads/2025/02/pngegg-15.png.The file was compressed from 10.69 KB to 5.54 KB, saving 48.21 percent, using WP-Optimize 
+[2025-02-01 19:50:31 : INFO] - Completed processing task with ID : 351, and type 'smush' 
+[2025-02-01 19:50:31 : INFO] - Lock option (updraft_lock_smush, wp_options) released 
+[2025-02-01 19:50:31 : INFO] - Successfully processed the queue (smush). 19 tasks were processed out of 19. 
+[2025-02-01 19:50:31 : INFO] - Lock option (updraft_lock_smush, wp_options) was deleted from the database 
+[2025-02-01 19:50:31 : INFO] - Cleaning up tasks of type (smush). A total of 4 tasks will be deleted. 
+[2025-02-01 23:47:56 : INFO] - Pruning the smush log file 
